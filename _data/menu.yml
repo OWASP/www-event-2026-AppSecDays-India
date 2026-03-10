@@ -1,0 +1,23 @@
+---
+- title: HOME
+  url: /
+- title: PROGRAM
+  items:
+    - title: Schedule
+      url: https://owaspappsecdaysindia2024vir.sched.com/
+    - title: Call for Papers - Closed
+      url: https://owasp.submittable.com/submit/295266/2024-owasp-virtual-appsec-days-india
+    - title: Keynote Speakers
+      url: /
+- title: EXHIBIT & SPONSOR
+  items:
+    - title: Sponsorship Prospectus
+      url: https://owasp.wufoo.com/forms/p1uef3wk1lhcmt4
+    - title: Sponsors
+      url: https://india.appsecdays.org/sponsorship/
+- title: ABOUT
+  items:
+    - title: OWASP Merchandise
+      url: https://owasp.org/store
+    - title: Event Code of Conduct
+      url: /event/codeofconduct/
