@@ -1,6 +1,6 @@
 ---
 
-title: Global AppSec Days India 2024
+title: Global AppSec Days India 2026
 layout: event-x
 
 ---
