@@ -1,1 +1,1 @@
-# OWASP AppSec Days India 2024
+# OWASP AppSec Days India 2026
