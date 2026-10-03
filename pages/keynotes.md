@@ -1,6 +1,6 @@
 ---
 
-title: Keynotes
+title: Keynote Speaker
 layout: event_noheader
 permalink: /program/keynotes/
 
@@ -13,10 +13,13 @@ permalink: /program/keynotes/
 <hr>
 		{% if speaker.name %}
 		<div>
-		    <a name="{{speaker.name}}"><img style="background-image: url(/assets/images/keynotes/{{speaker.image | default: 'owasp_logo.png'}});{{speaker.style}};"></a>
+		    <a name="{{speaker.name}}"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{speaker.name}}" style="background-image: url(/assets/images/keynotes/{{speaker.image | default: 'owasp_logo.png'}});{{speaker.style}};"></a>
 		</div>
 		<div class='keynote-info'>
 			<a><strong>{{speaker.name}}</strong></a>
+			{% if speaker.linkedin %}
+				&nbsp;<a href="{{ speaker.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="{{ speaker.name }} on LinkedIn"><i class="fab fa-linkedin"></i></a>
+			{% endif %}
 			<br>
 			{{speaker.bio}}
 			<br>

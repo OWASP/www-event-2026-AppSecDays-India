@@ -1,7 +1,16 @@
-# - image: Saumil-Shah.jpg
-#   name: Saumil Shah
-#   title: Users - The Last Frontier
-#   bio: >- 
-#         CEO and Founder CEO and Founder Net-Square
-#   subject: Users - The Last Frontier   
-#   abstract: >-
+# Keynote speakers for OWASP Global AppSec Days India 2026.
+# Rendered on /program/keynotes/ (pages/keynotes.md) and in _includes/keynotes.md.
+# Photos live in assets/images/keynotes/.
+
+- image: steve-springett.png
+  name: Steve Springett
+  linkedin: https://www.linkedin.com/in/stevespringett/
+  bio: >-
+    Steve Springett is the Chair of OWASP CycloneDX, creator of OWASP Dependency-Track,
+    founder and Chair of Ecma International TC54, coauthor of the OWASP Software Component
+    Verification Standard (SCVS) and Package-URL, and a member of the OWASP Global Board of
+    Directors. CycloneDX became an international standard (ECMA-424) in 2024 and is the SBOM
+    format referenced by the EU Cyber Resilience Act. Steve advises security, engineering, and
+    product leaders on software supply chain security, software transparency, and regulatory
+    readiness.
+  subject: Keynote

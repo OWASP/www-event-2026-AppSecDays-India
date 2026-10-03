@@ -1,0 +1,28 @@
+# 2026 schedule, in the same format as schedule-2025.yml (Sched order, with start times).
+# Sessions marked with `keynote:` are featured at the top of the schedule page and badged in the list.
+# The value is the label shown on the badge (e.g. "Opening Keynote", "Closing Keynote").
+# Speaker photos live in assets/images/speakers/2026/.
+
+- day: "Saturday, November 21"
+  time: "Time TBA"
+  tz: "IST"
+  title: "Keynote - Opening"
+  venue: "Virtual"
+  keynote: "Opening Keynote"
+  speakers:
+    - name: "Steve Springett"
+      image: steve-springett.png
+      position: "Chair, OWASP CycloneDX"
+      company: "OWASP Global Board of Directors"
+      bio: >-
+        Steve Springett is the Chair of OWASP CycloneDX, creator of OWASP Dependency-Track,
+        founder and Chair of Ecma International TC54, coauthor of the OWASP Software Component
+        Verification Standard (SCVS) and Package-URL, and a member of the OWASP Global Board of
+        Directors. CycloneDX became an international standard (ECMA-424) in 2024 and is the SBOM
+        format referenced by the EU Cyber Resilience Act. Steve advises security, engineering, and
+        product leaders on software supply chain security, software transparency, and regulatory
+        readiness. [LinkedIn](https://www.linkedin.com/in/stevespringett/)
+
+# Day marker only: renders the Day 2 heading and jump link until sessions are added.
+- day: "Sunday, November 22"
+  placeholder: true

@@ -1,9 +1,13 @@
 ---
 
-title: Schedule
+title: Schedule 2026
 layout: event_noheader
 permalink: /schedule/
 
 ---
 
-<a id="sched-embed" href="//owasp2022globalappsecsf.sched.com/" data-sched-sidebar="no">View the OWASP 2022 Global AppSec San Francisco schedule &amp; directory.</a><script type="text/javascript" src="//owasp2022globalappsecsf.sched.com/js/embed.js"></script>
+# {{page.title}}
+
+OWASP AppSec Days India 2026 (Virtual) runs over two days, {{ site.data.event-details.dates }} 2026. More sessions will be added as the programme is finalised. See also the [2025 speakers](/speakers/2025/) and [2024 speakers](/speakers/2024/).
+<br>
+{% include speaker_list.html schedule=site.data.schedule-2026 year="2026" %}

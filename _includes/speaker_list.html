@@ -91,6 +91,9 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 {% assign current_day = session.day %}
 {% assign current_time = "" %}
 {% endif %}
+{% if session.placeholder %}
+<p>Sessions for this day will be added as the programme is finalised.</p>
+{% else %}
 {% assign stamp = session.time | append: " " | append: session.tz %}
 {% if stamp != current_time %}
 <h3 class="sched-time">{{ session.time }} {{ session.tz }}</h3>
@@ -127,5 +130,6 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 </div>
 {% endif %}
 </article>
+{% endif %}
 {% endfor %}
 </div>
