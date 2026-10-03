@@ -5,7 +5,7 @@ layout: event-x
 
 ---
 
-<!-- rebuild 15 -->
+<!-- rebuild 16: redeploy to pick up www--site-theme fix (theme assets moved from owasp.org/www--site-theme/ to /assets/) -->
 
 ***{{ site.data.event-details.venue }}***
 
