@@ -1,0 +1,194 @@
+# Speakers for OWASP AppSec Days India 2024 (Virtual)
+# Source: https://owaspappsecdaysindia2024vir.sched.com/directory/speakers (captured locally so the site does not depend on Sched)
+
+- name: "Abhisek Datta"
+  image: abhisek-datta.jpg
+  company: "SafeDep"
+  position: "Co-Founder"
+  talks:
+    - "Policy Driven Vetting of OSS Components"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/abhisek_datta.27ipgn5j
+- name: "Alex Devassy"
+  image: alex-devassy.jpg
+  company: "AppViewX"
+  talks:
+    - "The Dark Side of AI: Exploring Adversarial Threats"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/alex_devassy.27ipeno7
+- name: "Anshu Bathla"
+  image: anshu-bathla.jpg
+  company: "AWS"
+  position: "Lead Consultant - Security"
+  talks:
+    - "Shift-left Security with Open Policy Agent(OPA) controls"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/anshu_bathla.7y9qr5f
+- name: "Antara mane"
+  image: antara-mane.jpg
+  company: "SecureNeexus"
+  position: "Vertical Lead"
+  talks:
+    - "Attack Surface Management - Safeguarding Digital Landscapes via AI"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/antara_mane.27ipd3em
+- name: "Bala Kumar Subramani"
+  image: bala-kumar-subramani.jpg
+  company: "Gitlab"
+  position: "Senior Backend Engineer"
+  talks:
+    - "Leveraging DevSecOps and AI to Triage and Resolve OWASP Top 10 Vulnerabilities in a project(s)"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/bala_kumar_subramani.27ipbs93
+- name: "BHARADWAJ D J"
+  image: djbharadwaj87.jpg
+  company: "SYNECHRON TECHNOLOGIES"
+  position: "SENIOR ARCHITECT - CYBER SECURITY"
+  talks:
+    - "HARMONIZE APPSEC STANDARDS: A MULTIFACETED APPROACH TO COMPLIANCE SPECTRUM MASTERY"
+  bio: >-
+    SENIOR ARCHITECT - CYBER SECURITY @SYNECHRON TECHNOLOGIES
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/djbharadwaj87
+- name: "Chris Cooper"
+  image: chris-cooper.jpg
+  company: "News Corp"
+  position: "Director of Product Security"
+  talks:
+    - "Threat Modelling is, Buy’n’Large, the best way to secure generative AI"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/chris_cooper.27ipb63u
+- name: "Debrup Ghosh"
+  image: debrup-ghosh.jpg
+  company: "F5"
+  position: "Principal Product Manager"
+  talks:
+    - "The Inmates Are Running the Asylum: Why Developers Drive Security Professionals Crazy and How to Restore Sanity"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/debrup_ghosh.27ipf68k
+- name: "Gowtham Sundar"
+  image: gowtham-sundar.jpg
+  company: "SPH Media"
+  position: "Head - AppSec"
+  talks:
+    - "Building Secure AI Systems: A Comprehensive Approach to AI Security"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/gowtham_sundar.27ipd08x
+- name: "Gustavo Arreaza"
+  image: gustavo-arreaza.jpg
+  company: "AppSecCl"
+  position: "CTO"
+  talks:
+    - "Transforming Threat Modeling: Harnessing ChatGPT for Automated Security Analysis"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/gustavo_arreaza.27ipdqhe
+- name: "Hotanya Ragtah"
+  image: hotanya-ragtah.jpg
+  company: "Kiwibank"
+  position: "Information Security Consultant"
+  talks:
+    - "Thinking Like An Attacker - Quick Wins For Securing Your Application"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/hotanya_ragtah.27j55q9e
+- name: "Jyoti Raval"
+  image: jyoti-raval.jpg
+  company: "Senior Staff Product Security Leader"
+  position: "Baker Hughes"
+  talks:
+    - "MPT! Pentest In Action"
+  bio: >-
+    Senior Staff Product Security Leader @ Baker Hughes
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/jyoti_raval.27ipeg8t
+- name: "Krishna Chaitanya Yeleswarapu"
+  image: krishna-chaitanya-yeleswarapu.jpg
+  company: "Standard Chartered Bank"
+  position: "Senior Manager"
+  talks:
+    - "ATT&CK LENS (An AI based Visualization for Mitre ATT&CK Exploration)"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/krishna_chaitanya_yeleswarapu.27j4x0r5
+- name: "Naveen S"
+  image: naveen-s.jpg
+  company: "Freshworks"
+  position: "Lead Security Engineer"
+  talks:
+    - "Building git hooks for your organization"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/naveen_s.27ipawhq
+- name: "R Nagarjun"
+  image: r-nagarjun.jpg
+  company: "AKTO"
+  position: "Security Researcher"
+  talks:
+    - "Practical Session on AI Red Teaming"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/r_nagarjun.27ipazzm
+- name: "Rohit Srivastwa"
+  image: rohit-srivastwa.jpg
+  company: "KAS Cyber Ventures"
+  position: "CoFounder & MD"
+  talks:
+    - "Beyond Compliance: Building a Security-First Culture"
+  bio: >-
+    CoFounder & MD, KAS Cyber Ventures. Enterprise Information Security Coach, Author, 4x Founder. Charter Member @TiE, Mentor, Investing time & money in startups.
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/rohit_srivastwa.27ip7mq2
+- name: "Saumil Shah"
+  image: saumil-shah.jpg
+  company: "Net-Square"
+  position: "CEO"
+  talks:
+    - "Users - The Last Frontier"
+  bio: >-
+    Saumil Shah is the founder and CEO of Net-Square, providing cutting edge information security services to clients around the globe. Saumil is an internationally recognized speaker and instructor, having regularly presented at conferences like 44CON, Blackhat, RSA, CanSecWest, PacSec, EUSecWest, Hack.lu, Hack-in-the-box and others. He has authored two books titled “Web Hacking: Attacks and Defense” and “The Anti-Virus Book”.
+
+    Saumil graduated with an M.S. in Computer Science from Purdue University, USA and a B.E. in Computer Engineering from Gujarat University. He spends his leisure time breaking software, flying kites, traveling around the world and taking pictures.
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/saumil_shah.1u6rc0g7
+- name: "Shankar Murali"
+  image: shankar-murali.jpg
+  company: "Standard Charted Bank"
+  position: "AVP"
+  talks:
+    - "ATT&CK LENS (An AI based Visualization for Mitre ATT&CK Exploration)"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/shankar_murali.27ipfe7z
+- name: "Shashank"
+  image: shashank.jpg
+  company: "CredShields"
+  position: "CEO"
+  talks:
+    - "Scaling Smart Contract Security with AI Automation"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/shashank.27ipf9ld
+- name: "Shivangi Nadkarni"
+  image: shivangi-nadkarni.jpg
+  company: "Arrka"
+  position: "CEO | Co-Founder"
+  talks:
+    - "Understanding Digital Governance"
+  bio: >-
+    CEO Co-Founder @ Arrka | Data Privacy, AI Governance, Digital Trust | IAPP Advisory Board Member | Speaker at IAPP Conferences | TEDx Speaker | Author | Jury Member | Event Advisory Boards Member
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/shivangi_nadkarni.27ip6yd3
+- name: "Somen Das"
+  image: somen-das.jpg
+  company: "TCS"
+  position: "Technology Head, Attack Surface Management"
+  talks:
+    - "Zero Day Apocalypse: The Rising Cyber Threat Landscape"
+  bio: >-
+    Technology Head, Attack Surface Management @ TCS
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/somen_das.27ipa35p
+- name: "Sunil Varkey"
+  image: sunil-varkey.jpg
+  position: "CISO"
+  talks:
+    - "The Role of CISOs in Shaping the Future of Digital Trust"
+  bio: >-
+    Over 27 years of leadership experience specialized in Information Cyber Security with large corporates in Banking, Telecom, ITES, software and Manufacturing in Middle East, US & India.
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/sunil_varkey.27ip78bb
+- name: "Takaharu Ogasa"
+  image: takaharu-ogasa.jpg
+  company: "Security Initiative"
+  position: "CEO"
+  talks:
+    - "My Threat Modeling Journey"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/takaharu_ogasa.27ipqr4g
+- name: "Tanya Janca"
+  image: tanya-janca.jpg
+  company: "SEMGREP"
+  position: "Head of Community and Education"
+  talks:
+    - "Maturing Your Application Security Program"
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/tanya_janca.27ipf3e1
+- name: "Vandana Verma"
+  image: vandanaverma.jpg
+  company: "Snyk"
+  position: "Security Relations Leader"
+  talks:
+    - "Closing Note and Updates"
+  bio: >-
+    With over 19 years of experience in the cybersecurity industry, I am a Security Relations Leader at Snyk, a leading cloud-native application security platform that helps developers find and fix vulnerabilities in their applications and containers. I work with the developer and security communities to raise awareness, educate, and enable them to build secure software faster and better. Running OWASP AppSec Days India Conference to educate people about cybersecurity.I have also served as a member of the OWASP Global Board of Directors, where I have contributed to the development and promotion of open-source security standards and best practices. As a passionate advocate for diversity and inclusion in cybersecurity, I lead and support various initiatives such as InfosecGirls, InfosecDiversity and InfosecKids, aiming to inspire, educate, and empower the next generation of security professionals. I am also a frequent speaker, trainer, and mentor at various global and regional events, such as Black Hat, Global AppSec, Grace Hopper, and BSides. I was Chair of the Women in Security Excelling-India chapter (1000+ members) while at IBM. I have received multiple awards and recognitions for my leadership, influence, and innovation in the security field. Trained 90 k+ citizens in kids/young women cyber awareness. One of the Top 10 Influential Women in Cybersecurity.
+  sched_url: https://owaspappsecdaysindia2024vir.sched.com/speaker/vandanaverma

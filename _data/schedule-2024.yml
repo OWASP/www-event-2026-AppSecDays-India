@@ -1,0 +1,266 @@
+# 2024 schedule in the same order as the Sched simple list, with the same start times.
+# Sessions marked with `keynote:` are featured at the top of the speakers page and badged in the schedule.
+# The value is the label shown on the badge (e.g. "Opening Keynote", "Closing Keynote").
+
+- day: "Thursday, November 14"
+  time: "10:00am"
+  tz: "IST"
+  title: "Users - The Last Frontier"
+  keynote: "Opening Keynote"
+  speakers:
+    - name: "Saumil Shah"
+      image: saumil-shah.jpg
+      position: "CEO"
+      company: "Net-Square"
+      bio: >-
+        Saumil Shah is the founder and CEO of Net-Square, providing cutting edge information security services to clients around the globe. Saumil is an internationally recognized speaker and instructor, having regularly presented at conferences like 44CON, Blackhat, RSA, CanSecWest, PacSec, EUSecWest, Hack.lu, Hack-in-the-box and others. He has authored two books titled “Web Hacking: Attacks and Defense” and “The Anti-Virus Book”.
+        Saumil graduated with an M.S. in Computer Science from Purdue University, USA and a B.E. in Computer Engineering from Gujarat University. He spends his leisure time breaking software, flying kites, traveling around the world and taking pictures.
+
+- day: "Thursday, November 14"
+  time: "10:45am"
+  tz: "IST"
+  title: "Scaling Smart Contract Security with AI Automation"
+  speakers:
+    - name: "Shashank"
+      image: shashank.jpg
+      position: "CEO"
+      company: "CredShields"
+
+- day: "Thursday, November 14"
+  time: "11:10am"
+  tz: "IST"
+  title: "Policy Driven Vetting of OSS Components"
+  speakers:
+    - name: "Abhisek Datta"
+      image: abhisek-datta.jpg
+      position: "Co-Founder"
+      company: "SafeDep"
+
+- day: "Thursday, November 14"
+  time: "11:45am"
+  tz: "IST"
+  title: "HARMONIZE APPSEC STANDARDS: A MULTIFACETED APPROACH TO COMPLIANCE SPECTRUM MASTERY"
+  speakers:
+    - name: "BHARADWAJ D J"
+      image: djbharadwaj87.jpg
+      position: "SENIOR ARCHITECT - CYBER SECURITY"
+      company: "SYNECHRON TECHNOLOGIES"
+      bio: >-
+        SENIOR ARCHITECT - CYBER SECURITY @SYNECHRON TECHNOLOGIES
+
+- day: "Thursday, November 14"
+  time: "12:30pm"
+  tz: "IST"
+  title: "Attack Surface Management - Safeguarding Digital Landscapes via AI"
+  speakers:
+    - name: "Antara mane"
+      image: antara-mane.jpg
+      position: "Vertical Lead"
+      company: "SecureNeexus"
+
+- day: "Thursday, November 14"
+  time: "1:15pm"
+  tz: "IST"
+  title: "Building git hooks for your organization"
+  speakers:
+    - name: "Naveen S"
+      image: naveen-s.jpg
+      position: "Lead Security Engineer"
+      company: "Freshworks"
+
+- day: "Thursday, November 14"
+  time: "2:00pm"
+  tz: "IST"
+  title: "ATT&CK LENS (An AI based Visualization for Mitre ATT&CK Exploration)"
+  speakers:
+    - name: "Shankar Murali"
+      image: shankar-murali.jpg
+      position: "AVP"
+      company: "Standard Charted Bank"
+    - name: "Krishna Chaitanya Yeleswarapu"
+      image: krishna-chaitanya-yeleswarapu.jpg
+      position: "Senior Manager"
+      company: "Standard Chartered Bank"
+
+- day: "Thursday, November 14"
+  time: "2:45pm"
+  tz: "IST"
+  title: "MPT! Pentest In Action"
+  speakers:
+    - name: "Jyoti Raval"
+      image: jyoti-raval.jpg
+      position: "Baker Hughes"
+      company: "Senior Staff Product Security Leader"
+      bio: >-
+        Senior Staff Product Security Leader @ Baker Hughes
+
+- day: "Thursday, November 14"
+  time: "3:30pm"
+  tz: "IST"
+  title: "Transforming Threat Modeling: Harnessing ChatGPT for Automated Security Analysis"
+  speakers:
+    - name: "Gustavo Arreaza"
+      image: gustavo-arreaza.jpg
+      position: "CTO"
+      company: "AppSecCl"
+
+- day: "Thursday, November 14"
+  time: "4:15pm"
+  tz: "IST"
+  title: "Practical Session on AI Red Teaming"
+  speakers:
+    - name: "R Nagarjun"
+      image: r-nagarjun.jpg
+      position: "Security Researcher"
+      company: "AKTO"
+
+- day: "Thursday, November 14"
+  time: "5:00pm"
+  tz: "IST"
+  title: "Beyond Compliance: Building a Security-First Culture"
+  keynote: "Closing Keynote"
+  speakers:
+    - name: "Rohit Srivastwa"
+      image: rohit-srivastwa.jpg
+      position: "CoFounder & MD"
+      company: "KAS Cyber Ventures"
+      bio: >-
+        CoFounder & MD, KAS Cyber Ventures. Enterprise Information Security Coach, Author, 4x Founder. Charter Member @TiE, Mentor, Investing time & money in startups.
+
+- day: "Friday, November 15"
+  time: "10:00am"
+  tz: "IST"
+  title: "Understanding Digital Governance"
+  keynote: "Opening Keynote"
+  speakers:
+    - name: "Shivangi Nadkarni"
+      image: shivangi-nadkarni.jpg
+      position: "CEO | Co-Founder"
+      company: "Arrka"
+      bio: >-
+        CEO Co-Founder @ Arrka | Data Privacy, AI Governance, Digital Trust | IAPP Advisory Board Member | Speaker at IAPP Conferences | TEDx Speaker | Author | Jury Member | Event Advisory Boards Member
+
+- day: "Friday, November 15"
+  time: "10:45am"
+  tz: "IST"
+  title: "The Dark Side of AI: Exploring Adversarial Threats"
+  speakers:
+    - name: "Alex Devassy"
+      image: alex-devassy.jpg
+      company: "AppViewX"
+
+- day: "Friday, November 15"
+  time: "11:30am"
+  tz: "IST"
+  title: "Threat Modelling is, Buy’n’Large, the best way to secure generative AI"
+  speakers:
+    - name: "Chris Cooper"
+      image: chris-cooper.jpg
+      position: "Director of Product Security"
+      company: "News Corp"
+
+- day: "Friday, November 15"
+  time: "11:45am"
+  tz: "IST"
+  title: "My Threat Modeling Journey"
+  speakers:
+    - name: "Takaharu Ogasa"
+      image: takaharu-ogasa.jpg
+      position: "CEO"
+      company: "Security Initiative"
+
+- day: "Friday, November 15"
+  time: "12:30pm"
+  tz: "IST"
+  title: "The Inmates Are Running the Asylum: Why Developers Drive Security Professionals Crazy and How to Restore Sanity"
+  speakers:
+    - name: "Debrup Ghosh"
+      image: debrup-ghosh.jpg
+      position: "Principal Product Manager"
+      company: "F5"
+
+- day: "Friday, November 15"
+  time: "1:15pm"
+  tz: "IST"
+  title: "Shift-left Security with Open Policy Agent(OPA) controls"
+  speakers:
+    - name: "Anshu Bathla"
+      image: anshu-bathla.jpg
+      position: "Lead Consultant - Security"
+      company: "AWS"
+
+- day: "Friday, November 15"
+  time: "2:00pm"
+  tz: "IST"
+  title: "Zero Day Apocalypse: The Rising Cyber Threat Landscape"
+  speakers:
+    - name: "Somen Das"
+      image: somen-das.jpg
+      position: "Technology Head, Attack Surface Management"
+      company: "TCS"
+      bio: >-
+        Technology Head, Attack Surface Management @ TCS
+
+- day: "Friday, November 15"
+  time: "2:45pm"
+  tz: "IST"
+  title: "Leveraging DevSecOps and AI to Triage and Resolve OWASP Top 10 Vulnerabilities in a project(s)"
+  speakers:
+    - name: "Bala Kumar Subramani"
+      image: bala-kumar-subramani.jpg
+      position: "Senior Backend Engineer"
+      company: "Gitlab"
+
+- day: "Friday, November 15"
+  time: "3:15pm"
+  tz: "IST"
+  title: "Thinking Like An Attacker - Quick Wins For Securing Your Application"
+  speakers:
+    - name: "Hotanya Ragtah"
+      image: hotanya-ragtah.jpg
+      position: "Information Security Consultant"
+      company: "Kiwibank"
+
+- day: "Friday, November 15"
+  time: "3:30pm"
+  tz: "IST"
+  title: "Building Secure AI Systems: A Comprehensive Approach to AI Security"
+  speakers:
+    - name: "Gowtham Sundar"
+      image: gowtham-sundar.jpg
+      position: "Head - AppSec"
+      company: "SPH Media"
+
+- day: "Friday, November 15"
+  time: "4:15pm"
+  tz: "IST"
+  title: "Maturing Your Application Security Program"
+  speakers:
+    - name: "Tanya Janca"
+      image: tanya-janca.jpg
+      position: "Head of Community and Education"
+      company: "SEMGREP"
+
+- day: "Friday, November 15"
+  time: "5:00pm"
+  tz: "IST"
+  title: "The Role of CISOs in Shaping the Future of Digital Trust"
+  keynote: "Closing Keynote"
+  speakers:
+    - name: "Sunil Varkey"
+      image: sunil-varkey.jpg
+      position: "CISO"
+      bio: >-
+        Over 27 years of leadership experience specialized in Information Cyber Security with large corporates in Banking, Telecom, ITES, software and Manufacturing in Middle East, US & India.
+
+- day: "Friday, November 15"
+  time: "5:30pm"
+  tz: "IST"
+  title: "Closing Note and Updates"
+  speakers:
+    - name: "Vandana Verma"
+      image: vandanaverma.jpg
+      position: "Security Relations Leader"
+      company: "Snyk"
+      bio: >-
+        With over 19 years of experience in the cybersecurity industry, I am a Security Relations Leader at Snyk, a leading cloud-native application security platform that helps developers find and fix vulnerabilities in their applications and containers. I work with the developer and security communities to raise awareness, educate, and enable them to build secure software faster and better. Running OWASP AppSec Days India Conference to educate people about cybersecurity.I have also served as a member of the OWASP Global Board of Directors, where I have contributed to the development and promotion of open-source security standards and best practices. As a passionate advocate for diversity and inclusion in cybersecurity, I lead and support various initiatives such as InfosecGirls, InfosecDiversity and InfosecKids, aiming to inspire, educate, and empower the next generation of security professionals. I am also a frequent speaker, trainer, and mentor at various global and regional events, such as Black Hat, Global AppSec, Grace Hopper, and BSides. I was Chair of the Women in Security Excelling-India chapter (1000+ members) while at IBM. I have received multiple awards and recognitions for my leadership, influence, and innovation in the security field. Trained 90 k+ citizens in kids/young women cyber awareness. One of the Top 10 Influential Women in Cybersecurity.

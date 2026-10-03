@@ -1,0 +1,296 @@
+# 2025 schedule in the same order as the Sched simple list, with the same start times.
+
+- day: "Saturday, October 18"
+  time: "9:00am"
+  tz: "IST"
+  title: "Keynote - Opening"
+  venue: "Main Hall"
+  keynote: "Opening Keynote"
+  speakers:
+    - name: "Venkatesh Murthy. K"
+      image: venkatesh-murthy-k.jpg
+
+- day: "Saturday, October 18"
+  time: "9:45am"
+  tz: "IST"
+  title: "Tea Break & Snacks"
+  venue: "Food Area Downstairs"
+
+- day: "Saturday, October 18"
+  time: "10:00am"
+  tz: "IST"
+  title: "Five MCP Anti-Patterns Compromising Agentic AI: Exploits and Mitigations"
+  venue: "Main Hall"
+  speakers:
+    - name: "Anshu Bathla"
+      image: anshu-bathla.jpg
+
+- day: "Saturday, October 18"
+  time: "10:00am"
+  tz: "IST"
+  title: "Don't Just Train It, Sign It: A New Era of ML Security"
+  venue: "Room 2"
+  speakers:
+    - name: "Achanandhi M"
+      image: achanandhi-m.jpg
+
+- day: "Saturday, October 18"
+  time: "10:00am"
+  tz: "IST"
+  title: "The CISO Lens: Communicating Risk Effectively to the Board - CISO Panel - 1"
+  venue: "CISO Track"
+  speakers:
+    - name: "Praveen Kumar MOTUPALLI"
+      image: praveen-kumar-motupalli.jpg
+      company: "Cybersecurity Leader MNC"
+    - name: "Shivakanth Kumar"
+      image: shivakanth-kumar.jpg
+    - name: "Sowmya Moni"
+      image: sowmya-moni.jpg
+
+- day: "Saturday, October 18"
+  time: "10:00am"
+  tz: "IST"
+  title: "CTF (Capture the Flag)"
+  venue: "CTF Area"
+  speakers:
+    - name: "Manindar Mohan"
+      image: manindar-mohan.jpg
+
+- day: "Saturday, October 18"
+  time: "10:00am"
+  tz: "IST"
+  title: "Solder & Spark Badge Village"
+  venue: "Solder and IoT Village Area"
+  speakers:
+    - name: "Kartik Ekanathan"
+    - name: "Mohammed Saqeeb Shariff"
+      image: mohammed-saqeeb-shariff.jpg
+
+- day: "Saturday, October 18"
+  time: "10:30am"
+  tz: "IST"
+  title: "Lint Today, Pwned Tomorrow: eBPF Adventures in OSS Malware Hunting at Internet Scale"
+  venue: "Main Hall"
+  speakers:
+    - name: "KunalSingh"
+      image: kunalsingh.jpg
+
+- day: "Saturday, October 18"
+  time: "10:45am"
+  tz: "IST"
+  title: "Operationalizing AI in AppSec: A Leadership Perspective on ML Platform Design"
+  venue: "Room 2"
+  speakers:
+    - name: "Sudhir Kumar Rai"
+      image: sudhir-kumar-rai.jpg
+
+- day: "Saturday, October 18"
+  time: "11:00am"
+  tz: "IST"
+  title: "Decoding Telecom Frauds: Uncovering the Root cause"
+  venue: "Main Hall"
+  speakers:
+    - name: "Kartik Lalan"
+      image: kartik-lalan.jpg
+
+- day: "Saturday, October 18"
+  time: "11:00am"
+  tz: "IST"
+  title: "IoT Firmware, SBOMs, and Supply Chain Security - CISO Panel - 2"
+  venue: "CISO Track"
+  speakers:
+    - name: "Himanshu Kumar Das"
+      image: himanshu-kumar-das.jpg
+    - name: "Mini TT"
+      image: mini-tt.jpg
+    - name: "Minatee Mishra"
+      image: minatee-mishra.jpg
+    - name: "Kowsalya Kodamagani"
+      image: kowsalya-kodamagani.jpg
+
+- day: "Saturday, October 18"
+  time: "11:30am"
+  tz: "IST"
+  title: "Beyond the First Bug: Building a Scalable Variant Hunting Program"
+  venue: "Main Hall"
+  speakers:
+    - name: "Nikhil Sahoo"
+      image: nikhil-sahoo.jpg
+    - name: "Arun Agrawalla"
+      image: arun-agrawalla.jpg
+
+- day: "Saturday, October 18"
+  time: "11:30am"
+  tz: "IST"
+  title: "Hands-On Real-Time Threat Management with MITRE ATLAS"
+  venue: "Room 2"
+  speakers:
+    - name: "Smita Jha"
+      image: smita-jha.jpg
+      position: "Accorian"
+      company: "Senior Security Compliance and Privacy Analyst"
+    - name: "Shashwath Aiyappa"
+      image: shashwath-aiyappa.jpg
+
+- day: "Saturday, October 18"
+  time: "12:00pm"
+  tz: "IST"
+  title: "Practical exploitation of zigbee-class networks with USB-based RF transceivers & open source softwar"
+  venue: "Main Hall"
+  speakers:
+    - name: "Rahul U"
+      image: rahul-u.jpg
+    - name: "Puneeth K"
+      image: puneeth-k.jpg
+
+- day: "Saturday, October 18"
+  time: "12:00pm"
+  tz: "IST"
+  title: "DevSecOps to DevSecAI: The Next Shift in Application Security - CISO Panel - 3"
+  venue: "CISO Track"
+  speakers:
+    - name: "Prajal Kulkarni"
+      image: prajal-kulkarni.jpg
+      position: "CISO"
+      company: "Grow"
+    - name: "Divakar Prayaga"
+      image: divakar-prayaga.jpg
+    - name: "Dhawal Shrivastava"
+      image: dhawal-shrivastava.jpg
+    - name: "Dr Samiksha Shukla"
+      image: dr-samiksha-shukla.jpg
+
+- day: "Saturday, October 18"
+  time: "12:15pm"
+  tz: "IST"
+  title: "Build A Successful Security Champions Program"
+  venue: "Room 2"
+  speakers:
+    - name: "Prasad Salvi"
+      image: prasad-salvi.jpg
+
+- day: "Saturday, October 18"
+  time: "12:30pm"
+  tz: "IST"
+  title: "Securing the AI Pipeline: Implementing DevSecOps for Machine Learning Projects"
+  venue: "Main Hall"
+  speakers:
+    - name: "Marudhamaran Gunasekaran"
+      image: marudhamaran-gunasekaran.jpg
+
+- day: "Saturday, October 18"
+  time: "1:00pm"
+  tz: "IST"
+  title: "Lunch"
+
+- day: "Saturday, October 18"
+  time: "2:00pm"
+  tz: "IST"
+  title: "The Evolving Security Landscape of AI-Generated Code"
+  venue: "Room 2"
+  speakers:
+    - name: "Aditi Bhatnagar"
+      image: aditi-bhatnagar.jpg
+
+- day: "Saturday, October 18"
+  time: "2:00pm"
+  tz: "IST"
+  title: "Unveiling the Risks of MCP Servers: An In-Depth Exploration"
+  venue: "Main Hall"
+  speakers:
+    - name: "Alex Devassy"
+      image: alex-devassy.jpg
+
+- day: "Saturday, October 18"
+  time: "2:00pm"
+  tz: "IST"
+  title: "Stopping Credential Misuse is critical to Cyber Defense - CISO Panel - 4"
+  venue: "CISO Track"
+  speakers:
+    - name: "Raakesh Thayyil"
+      image: raakesh-thayyil.jpg
+    - name: "Kamal Sharma"
+      image: kamal-sharma.jpg
+    - name: "Pooja Agrawalla"
+      image: pooja-agrawalla.jpg
+      position: "Security Leader"
+      company: "NXP"
+    - name: "Seema Khandelwal"
+      image: seema-khandelwal.jpg
+
+- day: "Saturday, October 18"
+  time: "2:30pm"
+  tz: "IST"
+  title: "Building Secure Agentic AI Systems Through Embedded Testability"
+  venue: "Room 2"
+  speakers:
+    - name: "Yuvaraj Govindarajulu"
+      image: yuvaraj-govindarajulu.jpg
+
+- day: "Saturday, October 18"
+  time: "3:00pm"
+  tz: "IST"
+  title: "Protecting AI Inference Workloads Using Confidential Computing - AWS Nitro"
+  venue: "Room 2"
+  speakers:
+    - name: "Karan Bhagat"
+      image: karan-bhagat.jpg
+    - name: "Chandirasekaran Dhakshinamoorthy"
+      image: chandirasekaran-dhakshinamoorthy.jpg
+
+- day: "Saturday, October 18"
+  time: "3:00pm"
+  tz: "IST"
+  title: "Vibe Coding to VibeSec: Securing AI‑Assisted Development from Supply‑Chain Threats"
+  venue: "Main Hall"
+  speakers:
+    - name: "Hariprasad Pujari"
+      image: hariprasad-pujari.jpg
+    - name: "Suchith Narayan"
+      image: suchith-narayan.jpg
+
+- day: "Saturday, October 18"
+  time: "3:30pm"
+  tz: "IST"
+  title: "We Got 99 Problems, but Popping a Windows Active Directory Domain Ain’t One"
+  venue: "Room 2"
+  speakers:
+    - name: "Rajat Singh"
+      image: rajat-singh.jpg
+    - name: "Manish Kishan Tanwar"
+      image: manish-kishan-tanwar.jpg
+
+- day: "Saturday, October 18"
+  time: "3:30pm"
+  tz: "IST"
+  title: "Zero-CVE by Design: Building a Pipeline to Generate and Maintain Vulnerability-Free Base Images"
+  venue: "Main Hall"
+  speakers:
+    - name: "Akhil Mahendra"
+      image: akhil-mahendra.jpg
+
+- day: "Saturday, October 18"
+  time: "4:00pm"
+  tz: "IST"
+  title: "Tea Break"
+
+- day: "Saturday, October 18"
+  time: "4:30pm"
+  tz: "IST"
+  title: "Open Source & Security: Happily Ever After?"
+  venue: "Main Hall"
+  speakers:
+    - name: "Ram Iyengar"
+      image: ram-iyengar.jpg
+
+- day: "Saturday, October 18"
+  time: "5:00pm"
+  tz: "IST"
+  title: "Closing"
+  venue: "Main Hall"
+  speakers:
+    - name: "Vandana Verma Sehgal"
+      image: vandana-verma-sehgal.jpg
+      position: "Security Leader"
+      company: "Snyk"

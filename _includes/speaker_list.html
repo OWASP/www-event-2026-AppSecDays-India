@@ -1,0 +1,131 @@
+{% comment %}
+Renders a conference schedule in Sched order.
+Usage: {% include speaker_list.html schedule=site.data.schedule-2025 year="2025" %}
+
+Optional per-session keys in the schedule data:
+  keynote: "Opening Keynote"   Featured in the "Keynote Speakers" strip at the top and badged in the schedule.
+                               Any non-empty value works; the string is used as the badge label.
+Multi-day schedules automatically get Day 1 / Day 2 jump links.
+Keep this markup unindented. The pages are Markdown, and indented HTML is rendered as a code block.
+{% endcomment %}
+<div class="sched-list">
+<style>
+.sched-day { margin: 1.6em 0 0.2em; scroll-margin-top: 5rem; }
+.sched-day small { display: block; font-size: 0.55em; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6a8a; margin-bottom: 0.2em; }
+.sched-time { margin: 1.1em 0 0.35em; color: #242158; }
+.sched-session { margin: 0 0 1rem; padding: 0 0 0.9rem; border-bottom: 1px solid #ddd; scroll-margin-top: 5rem; }
+.sched-session h4 { margin: 0 0 0.15em; }
+.sched-venue { color: #555; font-style: italic; }
+.sched-people { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 0.6rem; }
+.sched-person { display: flex; gap: 0.75rem; align-items: flex-start; max-width: 100%; }
+.sched-photo { width: 72px; height: 72px; flex: none; border-radius: 4px; border: 1px solid #ccc; background-size: cover; background-position: center; background-color: #f4f4f4; }
+.sched-person em { color: #444; }
+
+/* Keynote sessions inside the schedule (warm gold accent on the site's navy) */
+.sched-session.is-keynote { background: linear-gradient(135deg, #fff8e6 0%, #fdefc7 100%); border: 1px solid #f0d58a; border-left: 6px solid #e0a800; border-radius: 8px; padding: 0.9rem 1rem 1rem; box-shadow: 0 2px 8px rgba(224,168,0,0.18); }
+.sched-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #242158; background: linear-gradient(90deg, #ffd358 0%, #f5b800 100%); border-radius: 999px; padding: 0.25em 0.85em; margin-bottom: 0.45rem; box-shadow: 0 1px 2px rgba(0,0,0,0.12); }
+.sched-session.is-keynote .sched-photo { width: 96px; height: 96px; border: 3px solid #e0a800; box-shadow: 0 0 0 3px #fff, 0 0 0 5px #242158; }
+
+/* Featured keynote strip */
+.sched-keynotes { margin: 1.2rem 0 2rem; }
+.sched-keynotes h2 { margin: 0 0 0.9rem; }
+.sched-keynote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.sched-keynote-card { display: block; color: inherit; text-decoration: none; background: linear-gradient(180deg, #ffffff 0%, #fff8e6 100%); border: 1px solid #f0d58a; border-top: 6px solid #e0a800; border-radius: 10px; padding: 1.1rem 1rem 1rem; text-align: center; box-shadow: 0 2px 8px rgba(224,168,0,0.18); transition: box-shadow 0.15s ease, transform 0.15s ease; }
+.sched-keynote-card:only-child { max-width: 420px; width: 100%; margin: 0 auto; }
+.sched-keynote-card:hover, .sched-keynote-card:focus { text-decoration: none; color: inherit; box-shadow: 0 8px 22px rgba(224,168,0,0.32); transform: translateY(-3px); }
+.sched-keynote-photo { width: 130px; height: 130px; margin: 0 auto 0.8rem; border-radius: 50%; border: 4px solid #e0a800; box-shadow: 0 0 0 3px #fff, 0 0 0 6px #242158; background-size: cover; background-position: center; background-color: #f4f4f4; }
+.sched-keynote-card .sched-badge { margin-bottom: 0.6rem; }
+.sched-keynote-name { display: block; font-size: 1.2rem; font-weight: 700; color: #242158; margin: 0 0 0.2rem; }
+.sched-keynote-role { display: block; font-style: italic; color: #444; margin-bottom: 0.6rem; }
+.sched-keynote-talk { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+.sched-keynote-when { display: block; font-size: 0.85rem; color: #6b6a8a; }
+
+/* Day jump links */
+.sched-list ul.sched-days { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.4rem; padding: 0; list-style: none; }
+.sched-list ul.sched-days li { margin: 0; padding: 0; }
+.sched-days a { display: inline-block; padding: 0.5em 1em; border: 2px solid #242158; border-radius: 999px; color: #242158; font-weight: 700; text-decoration: none; }
+.sched-days a:hover, .sched-days a:focus { background: #242158; color: #fff; text-decoration: none; }
+.sched-days a small { display: block; font-weight: 400; font-size: 0.8em; }
+</style>
+{% assign days = include.schedule | map: "day" | uniq %}
+{% assign keynotes = include.schedule | where_exp: "s", "s.keynote" %}
+{% if keynotes.size > 0 %}
+<section class="sched-keynotes" aria-labelledby="sched-keynotes-heading">
+<h2 id="sched-keynotes-heading">Keynote Speakers</h2>
+<div class="sched-keynote-grid">
+{% for session in include.schedule %}
+{% if session.keynote %}
+{% for speaker in session.speakers %}
+<a class="sched-keynote-card" href="#session-{{ forloop.parentloop.index }}">
+{% if speaker.image %}
+<div class="sched-keynote-photo" style="background-image: url(/assets/images/speakers/{{ include.year }}/{{ speaker.image }});" role="img" aria-label="{{ speaker.name }}"></div>
+{% endif %}
+<span class="sched-badge">{{ session.keynote }}</span>
+<span class="sched-keynote-name">{{ speaker.name }}</span>
+{% if speaker.position or speaker.company %}
+<span class="sched-keynote-role">{% if speaker.position %}{{ speaker.position }}{% endif %}{% if speaker.position and speaker.company %}, {% endif %}{% if speaker.company %}{{ speaker.company }}{% endif %}</span>
+{% endif %}
+<span class="sched-keynote-talk">{{ session.title }}</span>
+<span class="sched-keynote-when">{{ session.day }} &middot; {{ session.time }} {{ session.tz }}</span>
+</a>
+{% endfor %}
+{% endif %}
+{% endfor %}
+</div>
+</section>
+{% endif %}
+{% if days.size > 1 %}
+<ul class="sched-days" aria-label="Jump to day">
+{% for day in days %}
+<li><a href="#{{ day | slugify }}">Day {{ forloop.index }}<small>{{ day }}</small></a></li>
+{% endfor %}
+</ul>
+{% endif %}
+{% assign current_day = "" %}
+{% assign current_time = "" %}
+{% assign day_number = 0 %}
+{% for session in include.schedule %}
+{% if session.day != current_day %}
+{% assign day_number = day_number | plus: 1 %}
+<h2 class="sched-day" id="{{ session.day | slugify }}">{% if days.size > 1 %}<small>Day {{ day_number }}</small>{% endif %}{{ session.day }}</h2>
+{% assign current_day = session.day %}
+{% assign current_time = "" %}
+{% endif %}
+{% assign stamp = session.time | append: " " | append: session.tz %}
+{% if stamp != current_time %}
+<h3 class="sched-time">{{ session.time }} {{ session.tz }}</h3>
+{% assign current_time = stamp %}
+{% endif %}
+<article class="sched-session{% if session.keynote %} is-keynote{% endif %}" id="session-{{ forloop.index }}">
+{% if session.keynote %}
+<span class="sched-badge">{{ session.keynote }}</span>
+{% endif %}
+<h4>{{ session.title }}</h4>
+{% if session.venue %}
+<div class="sched-venue">{{ session.venue }}</div>
+{% endif %}
+{% if session.speakers.size > 0 %}
+<div class="sched-people">
+{% for speaker in session.speakers %}
+<div class="sched-person">
+{% if speaker.image %}
+<div class="sched-photo" style="background-image: url(/assets/images/speakers/{{ include.year }}/{{ speaker.image }});" role="img" aria-label="{{ speaker.name }}"></div>
+{% endif %}
+<div>
+<strong>{{ speaker.name }}</strong>
+{% if speaker.position or speaker.company %}
+<br>
+<em>{% if speaker.position %}{{ speaker.position }}{% endif %}{% if speaker.position and speaker.company %}, {% endif %}{% if speaker.company %}{{ speaker.company }}{% endif %}</em>
+{% endif %}
+{% if speaker.bio %}
+{% comment %}Pipes are escaped first: kramdown treats "|" as a table cell, which turned pipe-separated bios into tables.{% endcomment %}
+{{ speaker.bio | replace: "|", "&#124;" | markdownify }}
+{% endif %}
+</div>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+</article>
+{% endfor %}
+</div>

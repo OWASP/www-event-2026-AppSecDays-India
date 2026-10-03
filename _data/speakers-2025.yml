@@ -1,0 +1,252 @@
+# Speakers for OWASP AppSec Days India 2025 (Bangalore)
+# Source: https://owaspappsecdaysbangaloreoct.sched.com/directory/speakers (captured locally so the site does not depend on Sched)
+
+- name: "Achanandhi M"
+  image: achanandhi-m.jpg
+  talks:
+    - "Don't Just Train It, Sign It: A New Era of ML Security"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/achanandhi_m.28ofllf5
+- name: "Aditi Bhatnagar"
+  image: aditi-bhatnagar.jpg
+  talks:
+    - "The Evolving Security Landscape of AI-Generated Code"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/aditi_bhatnagar.28ul8eqs
+- name: "Agnidipta Sarkar"
+  image: ajit-hatti.jpg
+  company: "Founder"
+  position: "Pureid"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/ajit_hatti.28tg6aw3
+- name: "Akhil Mahendra"
+  image: akhil-mahendra.jpg
+  talks:
+    - "Zero-CVE by Design: Building a Pipeline to Generate and Maintain Vulnerability-Free Base Images"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/akhil_mahendra.28ofllf7
+- name: "Alex Devassy"
+  image: alex-devassy.jpg
+  talks:
+    - "Unveiling the Risks of MCP Servers: An In-Depth Exploration"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/alex_devassy.28oflldb
+- name: "Anshu Bathla"
+  image: anshu-bathla.jpg
+  talks:
+    - "Five MCP Anti-Patterns Compromising Agentic AI: Exploits and Mitigations"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/anshu_bathla.28oflldm
+- name: "Antara Mane"
+  image: antara-mane.jpg
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/antara_mane.28ofllev
+- name: "Arun Agrawalla"
+  image: arun-agrawalla.jpg
+  talks:
+    - "Beyond the First Bug: Building a Scalable Variant Hunting Program"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/arun_agrawalla.28ofllfd
+- name: "Chandirasekaran Dhakshinamoorthy"
+  image: chandirasekaran-dhakshinamoorthy.jpg
+  talks:
+    - "Protecting AI Inference Workloads Using Confidential Computing - AWS Nitro"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/chandirasekaran_dhakshinamoorthy.28oflldm
+- name: "Dhawal Shrivastava"
+  image: dhawal-shrivastava.jpg
+  talks:
+    - "DevSecOps to DevSecAI: The Next Shift in Application Security - CISO Panel - 3"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/dhawal_shrivastava.82nrruv
+- name: "Divakar Prayaga"
+  image: divakar-prayaga.jpg
+  talks:
+    - "DevSecOps to DevSecAI: The Next Shift in Application Security - CISO Panel - 3"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/divakar_prayaga.28qlnsrg
+- name: "Dr Samiksha Shukla"
+  image: dr-samiksha-shukla.jpg
+  talks:
+    - "DevSecOps to DevSecAI: The Next Shift in Application Security - CISO Panel - 3"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/dr_samiksha_shukla.28qlqoni
+- name: "Hariprasad Pujari"
+  image: hariprasad-pujari.jpg
+  talks:
+    - "Vibe Coding to VibeSec: Securing AI‑Assisted Development from Supply‑Chain Threats"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/hariprasad_pujari.28oflldx
+- name: "Harish Goel"
+  image: harish-goel.jpg
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/harish_goel.28oflldd
+- name: "Himanshu Kumar Das"
+  image: himanshu-kumar-das.jpg
+  talks:
+    - "IoT Firmware, SBOMs, and Supply Chain Security - CISO Panel - 2"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/himanshu_kumar_das.28ulb513
+- name: "Kamal Sharma"
+  image: kamal-sharma.jpg
+  talks:
+    - "Stopping Credential Misuse is critical to Cyber Defense - CISO Panel - 4"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/kamal_sharma.28rfi2qx
+- name: "Karan Bhagat"
+  image: karan-bhagat.jpg
+  talks:
+    - "Protecting AI Inference Workloads Using Confidential Computing - AWS Nitro"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/karan_bhagat.28oflldm
+- name: "Karan Jain"
+  image: karan-jain.jpg
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/karan_jain.82fyk4x
+- name: "Kartik Lalan"
+  image: kartik-lalan.jpg
+  talks:
+    - "Decoding Telecom Frauds: Uncovering the Root cause"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/kartik_lalan.28oflldp
+- name: "Kowsalya Kodamagani"
+  image: kowsalya-kodamagani.jpg
+  talks:
+    - "IoT Firmware, SBOMs, and Supply Chain Security - CISO Panel - 2"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/kowsalya_kodamagani.28qlrecx
+- name: "KunalSingh"
+  image: kunalsingh.jpg
+  talks:
+    - "Lint Today, Pwned Tomorrow: eBPF Adventures in OSS Malware Hunting at Internet Scale"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/kunalsingh.28oflldp
+- name: "Lakshmi Das"
+  image: lakshmi-das.jpg
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/lakshmi_das.28qlr61u
+- name: "Manindar Mohan"
+  image: manindar-mohan.jpg
+  talks:
+    - "CTF (Capture the Flag)"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/manindar_mohan.28oflldt
+- name: "Manish Kishan Tanwar"
+  image: manish-kishan-tanwar.jpg
+  talks:
+    - "We Got 99 Problems, but Popping a Windows Active Directory Domain Ain’t One"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/manish_kishan_tanwar.28oflldd
+- name: "Marudhamaran Gunasekaran"
+  image: marudhamaran-gunasekaran.jpg
+  talks:
+    - "Securing the AI Pipeline: Implementing DevSecOps for Machine Learning Projects"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/marudhamaran_gunasekaran.28ofllex
+- name: "Minatee Mishra"
+  image: minatee-mishra.jpg
+  talks:
+    - "IoT Firmware, SBOMs, and Supply Chain Security - CISO Panel - 2"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/minatee_mishra.28qlr9y2
+- name: "Mini TT"
+  image: mini-tt.jpg
+  talks:
+    - "IoT Firmware, SBOMs, and Supply Chain Security - CISO Panel - 2"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/mini_tt.28qlqv7f
+- name: "Mohammed Saqeeb Shariff"
+  image: mohammed-saqeeb-shariff.jpg
+  talks:
+    - "Solder & Spark Badge Village"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/mohammed_saqeeb_shariff.28oflldb
+- name: "Nikhil Sahoo"
+  image: nikhil-sahoo.jpg
+  talks:
+    - "Beyond the First Bug: Building a Scalable Variant Hunting Program"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/nikhil_sahoo.28oflldt
+- name: "Pooja Agrawalla"
+  image: pooja-agrawalla.jpg
+  company: "NXP"
+  position: "Security Leader"
+  talks:
+    - "Stopping Credential Misuse is critical to Cyber Defense - CISO Panel - 4"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/pooja_agrawalla.28tfn9b4
+- name: "Prajal Kulkarni"
+  image: prajal-kulkarni.jpg
+  company: "Grow"
+  position: "CISO"
+  talks:
+    - "DevSecOps to DevSecAI: The Next Shift in Application Security - CISO Panel - 3"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/prajal_kulkarni.28tg5v25
+- name: "Prasad Salvi"
+  image: prasad-salvi.jpg
+  talks:
+    - "Build A Successful Security Champions Program"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/prasad_salvi.82fyk4w
+- name: "Praveen Kumar MOTUPALLI"
+  image: praveen-kumar-motupalli.jpg
+  company: "Cybersecurity Leader MNC"
+  talks:
+    - "The CISO Lens: Communicating Risk Effectively to the Board - CISO Panel - 1"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/praveen_kumar_motupalli.28vwbnvt
+- name: "Pravinkumar Jha"
+  image: pravinkumar-jha.jpg
+  company: "Engineering Manager - Product Security"
+  position: "PropertyGuru Group"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/pravinkumar_jha.28tfn2wv
+- name: "Puneeth K"
+  image: puneeth-k.jpg
+  talks:
+    - "Practical exploitation of zigbee-class networks with USB-based RF transceivers & open source softwar"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/puneeth_k.28ofllen
+- name: "Raakesh Thayyil"
+  image: raakesh-thayyil.jpg
+  talks:
+    - "Stopping Credential Misuse is critical to Cyber Defense - CISO Panel - 4"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/raakesh_thayyil.28wyttaf
+- name: "Rahul U"
+  image: rahul-u.jpg
+  talks:
+    - "Practical exploitation of zigbee-class networks with USB-based RF transceivers & open source softwar"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/rahul_u.28ofllfe
+- name: "Rajat Singh"
+  image: rajat-singh.jpg
+  talks:
+    - "We Got 99 Problems, but Popping a Windows Active Directory Domain Ain’t One"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/rajat_singh.28oflld9
+- name: "Ram Iyengar"
+  image: ram-iyengar.jpg
+  talks:
+    - "Open Source & Security: Happily Ever After?"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/ram_iyengar.82nccx4
+- name: "Seema Khandelwal"
+  image: seema-khandelwal.jpg
+  talks:
+    - "Stopping Credential Misuse is critical to Cyber Defense - CISO Panel - 4"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/seema_khandelwal.28vwbi8e
+- name: "Shashwath Aiyappa"
+  image: shashwath-aiyappa.jpg
+  talks:
+    - "Hands-On Real-Time Threat Management with MITRE ATLAS"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/shashwath_aiyappa.28oflle1
+- name: "Shivakanth Kumar"
+  image: shivakanth-kumar.jpg
+  talks:
+    - "The CISO Lens: Communicating Risk Effectively to the Board - CISO Panel - 1"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/shivakanth_kumar.28qlq2vv
+- name: "Smita Jha"
+  image: smita-jha.jpg
+  company: "Senior Security Compliance and Privacy Analyst"
+  position: "Accorian"
+  talks:
+    - "Hands-On Real-Time Threat Management with MITRE ATLAS"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/smita_jha.28ofllda
+- name: "Somen Das"
+  image: somen-das.jpg
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/somen_das.82nrgkp
+- name: "Sowmya Moni"
+  image: sowmya-moni.jpg
+  talks:
+    - "The CISO Lens: Communicating Risk Effectively to the Board - CISO Panel - 1"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/sowmya_moni.28qlqjjr
+- name: "Suchith Narayan"
+  image: suchith-narayan.jpg
+  talks:
+    - "Vibe Coding to VibeSec: Securing AI‑Assisted Development from Supply‑Chain Threats"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/suchith_narayan.28oflldb
+- name: "Sudhir Kumar Rai"
+  image: sudhir-kumar-rai.jpg
+  talks:
+    - "Operationalizing AI in AppSec: A Leadership Perspective on ML Platform Design"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/sudhir_kumar_rai.28ofllfj
+- name: "Vandana Verma Sehgal"
+  image: vandana-verma-sehgal.jpg
+  company: "Snyk"
+  position: "Security Leader"
+  talks:
+    - "Closing"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/vandana_verma_sehgal.29qvop9k
+- name: "Venkatesh Murthy. K"
+  image: venkatesh-murthy-k.jpg
+  talks:
+    - "Keynote - Opening"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/venkatesh_murthy_k.28ula17t
+- name: "Yuvaraj Govindarajulu"
+  image: yuvaraj-govindarajulu.jpg
+  talks:
+    - "Building Secure Agentic AI Systems Through Embedded Testability"
+  sched_url: https://owaspappsecdaysbangaloreoct.sched.com/speaker/yuvaraj_govindarajulu.28ofllf0
