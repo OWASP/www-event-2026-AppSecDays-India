@@ -28,6 +28,8 @@ Differences from the theme version:
 {% endif %}
   <head>
     {% include head.html %}
+    {%- comment -%} GitHub Pages caches /assets/css/styles.css for 4 hours; the per-build query string forces the current stylesheet. {%- endcomment -%}
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   </head>
 
   <body class="base-grid full-width event" style='background-color: #{{site.data.event-details.bodycolor}}'>
