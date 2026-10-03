@@ -1,0 +1,28 @@
+// Event nav bar and dropdowns use the theme grey ($dark / gray).
+// Match the OWASP navigation blue used elsewhere in the theme.
+$nav-blue: #233e81;
+
+.event header {
+  background-color: $nav-blue;
+}
+
+.event .dropdown-menu li {
+  background-color: $nav-blue;
+  color: #fff;
+
+  &:hover {
+    background-color: #2e51a9;
+  }
+
+  &:active {
+    background-color: #1e346d;
+  }
+
+  &.separator {
+    border-top-color: #335bbd;
+  }
+}
+
+.event .dropdown-menu:after {
+  border-bottom-color: $nav-blue;
+}

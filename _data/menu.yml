@@ -1,25 +1,25 @@
 ---
-- title: HOME
+- title: Home
   url: /
-- title: SCHEDULE 2026
+- title: Schedule 2026
   items:
     - title: Day 1 · Saturday, November 21
       url: /schedule/#saturday-november-21
     - title: Day 2 · Sunday, November 22
       url: /schedule/#sunday-november-22
-- title: EXHIBIT & SPONSOR
+- title: Exhibit & Sponsor
   items:
     - title: Sponsorship Prospectus
       url: https://owasp.wufoo.com/forms/p1uef3wk1lhcmt4
     - title: Sponsors
       url: https://india.appsecdays.org/sponsorship/
-- title: PREVIOUS CONFERENCE INFORMATION
+- title: Previous Conference Information
   items:
     - title: 2025 Speakers
       url: /speakers/2025/
     - title: 2024 Speakers
       url: /speakers/2024/
-- title: ABOUT
+- title: About
   items:
     - title: OWASP Merchandise
       url: https://owasp.org/store
