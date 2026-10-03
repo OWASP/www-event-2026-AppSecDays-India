@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{%- comment -%}
+Local override of the owasp/www--site-theme `event-x` layout.
+
+Differences from the theme version:
+  * The "Keynote Speakers" band below the home page content has been removed.
+    Keynotes are still published on /program/keynotes/ (pages/keynotes.md).
+  * A "Sponsors" section (from _data/sponsors.yml) and a "Supporting Partners"
+    section (from _data/partners.yml) are rendered below the home page content.
+{%- endcomment -%}
+{% assign reason_info = false %}
+{% for static_file in site.static_files %}
+  {% if static_file.path contains '_includes/reasons.md' %}
+    {% assign reason_info = true %}
+  {% endif %}
+{% endfor %}
+
+{% assign dev_file = site.static_files | where: "name", "devsite.txt" %}
+{% if dev_file.size > 0 %}
+{% assign baseurl = '/' %}
+{% else %}
+{% assign baseurl = '' %}
+{% endif %}
+{% assign register-text = 'Register' %}
+{% if site.data.event-details.registertext %}
+{% assign register-text = site.data.event-details.registertext %}
+{% endif %}
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body class="base-grid full-width event" style='background-color: #{{site.data.event-details.bodycolor}}'>
+    <div id="blocker"></div>
+
+    {% include noscript.html %}
+    {% include evnt-header.html %}
+
+    <main role="main">
+    {% assign bg-style = "linear-gradient(#fff 90%, #fff)" %}
+    {% if site.data.event-details.background-style %}
+    {% assign bg-style = site.data.event-details.background-style %}
+    {% endif %}
+    {% assign bg-padding = "0em 2em 4em 2em" %}
+    {% if site.data.event-details.background-padding %}
+    {% assign bg-padding = site.data.event-details.background-padding %}
+    {% endif %}
+      <div class='event-image-container-x' style="background:{{bg-style}};padding:{{bg-padding}};" >
+        <img src="{{baseurl}}assets/images/{{site.data.event-details.background}}" />
+      </div>
+
+      <div class="main-wrapper event-wrapper">
+          <div class="left-70">
+          {{ content }}
+          </div>
+          {% if page.pricing == nil or page.pricing == true %}
+              {% include event-pricing-2.0.html %}
+          {% endif %}
+
+          <div class='alt-wrapper'>
+            {% include sponsors-front.html %}
+            {% include partners-front.html %}
+            {% if reason_info %}
+            <section class='reasons-front'>
+            {% include reasons.md %}
+            </section>
+            {% endif %}
+          </div>
+      </div>
+    </main>
+
+    {% include evnt-footer-2.0.html %}
+
+  </body>
+</html>

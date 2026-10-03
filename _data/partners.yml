@@ -1,0 +1,26 @@
+# Supporting partners for OWASP Global AppSec Days India 2026
+# (community partners, OWASP chapters, universities, media partners, etc.).
+#
+# Rendered in the "Supporting Partners" section on the home page
+# (_includes/partners-front.html). Logos live in assets/images/partners/.
+#
+# Supporting partners are kept separate from _data/sponsors.yml so that they are
+# not listed as paid sponsors on /sponsors/ or in the site footer.
+#
+# Example entry:
+#  - logo: /assets/images/partners/example-partner.png
+#    name: Example Community Partner
+#    url: https://example.org
+#    type: Community Partner
+- logo: /assets/images/partners/infosecgirls.jpeg
+  name: Infosec Girls
+  url: https://infosecgirls.in
+  type: Community Partner
+- logo: /assets/images/partners/infosecdiversity.png
+  name: Infosec Diversity
+  url: https://infosecdiversity.com
+  type: Community Partner
+- logo: /assets/images/partners/owasp-bangalore.jpeg
+  name: OWASP Bangalore Chapter
+  url: https://owasp.org/www-chapter-bangalore/
+  type: OWASP Chapter

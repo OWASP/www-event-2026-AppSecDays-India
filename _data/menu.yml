@@ -2,11 +2,7 @@
 - title: Home
   url: /
 - title: Schedule 2026
-  items:
-    - title: Day 1 · Saturday, November 21
-      url: /schedule/#saturday-november-21
-    - title: Day 2 · Sunday, November 22
-      url: /schedule/#sunday-november-22
+  url: /schedule/
 - title: Exhibit & Sponsor
   items:
     - title: Sponsorship Prospectus

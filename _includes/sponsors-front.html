@@ -1,0 +1,46 @@
+{%- comment -%}
+Home page "Sponsors" section.
+Reads _data/sponsors.yml. Logos are grouped by sponsorship tier (the `type` field),
+in the order listed in `tier_order`. Any tier not in that list is rendered last.
+When there are no sponsors yet, a call-to-action to become a sponsor is shown instead.
+{%- endcomment -%}
+{% assign tier_order = "Diamond Plus|Diamond|Platinum|Gold|Silver|Bronze|Keynote Sponsor|Lunch Sponsor|Coffee Break Sponsor|Networking Reception Sponsor|Lanyard Sponsor|Hotel Key Cards Sponsor" | split: "|" %}
+{% assign sponsors = site.data.sponsors | where_exp: "s", "s.name" %}
+{% assign prospectus_url = site.data.event-details.sponsorship_url | default: "https://owasp.wufoo.com/forms/p1uef3wk1lhcmt4" %}
+<section class="sponsors-front" id="sponsors">
+  <h3>Sponsors</h3>
+  {% if sponsors.size > 0 %}
+  <p class="partner-intro">Thank you to the organisations making OWASP AppSec Days India 2026 possible.</p>
+  {% for tier in tier_order %}
+    {% assign tier_sponsors = sponsors | where: "type", tier | sort_natural: "name" %}
+    {% if tier_sponsors.size > 0 %}
+    <h4>{{ tier }}{% unless tier contains "Sponsor" %} Sponsors{% endunless %}</h4>
+    <div class="partner-logos">
+      {% for sponsor in tier_sponsors %}
+      <a href="{{ sponsor.url }}" class="partner-logo" target="_blank" rel="sponsored noopener noreferrer" title="{{ sponsor.name }}"><img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}"></a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  {% endfor %}
+  {% assign other_sponsors = sponsors | where_exp: "s", "s.type != 'corporate'" %}
+  {% assign remaining = "" | split: "" %}
+  {% for sponsor in other_sponsors %}
+    {% unless tier_order contains sponsor.type %}
+      {% assign remaining = remaining | push: sponsor %}
+    {% endunless %}
+  {% endfor %}
+  {% if remaining.size > 0 %}
+    <h4>Sponsors</h4>
+    <div class="partner-logos">
+      {% for sponsor in remaining %}
+      <a href="{{ sponsor.url }}" class="partner-logo" target="_blank" rel="sponsored noopener noreferrer" title="{{ sponsor.name }}"><img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}"></a>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% else %}
+  <p class="partner-intro">Sponsorship opportunities for OWASP AppSec Days India 2026 are now open. Put your brand in front of 1200+ application security professionals.</p>
+  {% endif %}
+  <div class="partner-cta">
+    <a href="{{ prospectus_url }}" class="cta-button blue" target="_blank" rel="noopener noreferrer">Become a Sponsor</a>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 # Keynote speakers for OWASP Global AppSec Days India 2026.
-# Rendered on /program/keynotes/ (pages/keynotes.md) and in _includes/keynotes.md.
+# Rendered on /program/keynotes/ (pages/keynotes.md).
+# The keynote band on the home page is intentionally disabled (see _layouts/event-x.html).
 # Photos live in assets/images/keynotes/.
 
 - image: steve-springett.png

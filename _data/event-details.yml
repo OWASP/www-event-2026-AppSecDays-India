@@ -3,6 +3,9 @@ pricing-title: Pricing
 dates: November 21 - 22
 conference: November 21 - 22
 registration_url: https://secwiser.com/owasp-appsec-days
+# "Become a Sponsor" / "Become a Supporting Partner" buttons on the home page
+sponsorship_url: https://owasp.wufoo.com/forms/p1uef3wk1lhcmt4
+partner_contact_url: https://owasp.wufoo.com/forms/p1uef3wk1lhcmt4
 logo_url: https://owasp.org/
 location: Virtual
 background: /owasp_2026.png

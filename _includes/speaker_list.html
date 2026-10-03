@@ -5,7 +5,9 @@ Usage: {% include speaker_list.html schedule=site.data.schedule-2025 year="2025"
 Optional per-session keys in the schedule data:
   keynote: "Opening Keynote"   Featured in the "Keynote Speakers" strip at the top and badged in the schedule.
                                Any non-empty value works; the string is used as the badge label.
-Multi-day schedules automatically get Day 1 / Day 2 jump links.
+Multi-day schedules automatically get Day 1 / Day 2 tabs: each day is its own panel and only one is
+shown at a time. Links to #<day-slug> or #session-N open the matching day. Without JavaScript every
+day is listed in order.
 Keep this markup unindented. The pages are Markdown, and indented HTML is rendered as a code block.
 {% endcomment %}
 <div class="sched-list">
@@ -40,12 +42,17 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 .sched-keynote-talk { display: block; font-weight: 600; margin-bottom: 0.5rem; }
 .sched-keynote-when { display: block; font-size: 0.85rem; color: #6b6a8a; }
 
-/* Day jump links */
+/* Day tabs: one panel per day, Day 1 shown first. Without JavaScript all days are listed in order. */
 .sched-list ul.sched-days { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.4rem; padding: 0; list-style: none; }
 .sched-list ul.sched-days li { margin: 0; padding: 0; }
-.sched-days a { display: inline-block; padding: 0.5em 1em; border: 2px solid #242158; border-radius: 999px; color: #242158; font-weight: 700; text-decoration: none; }
-.sched-days a:hover, .sched-days a:focus { background: #242158; color: #fff; text-decoration: none; }
+.sched-days a { display: inline-block; padding: 0.5em 1.2em; border: 2px solid #242158; border-radius: 999px; color: #242158; font-weight: 700; text-decoration: none; }
+.sched-days a:hover, .sched-days a:focus, .sched-days a.is-active { background: #242158; color: #fff; text-decoration: none; }
 .sched-days a small { display: block; font-weight: 400; font-size: 0.8em; }
+.sched-day-panel { scroll-margin-top: 5rem; }
+.sched-day-panel[hidden] { display: none; }
+.sched-list.has-tabs .sched-day-panel { border: 1px solid #ddd; border-top: 6px solid #242158; border-radius: 10px; padding: 0 1.2rem 0.6rem; background: #fff; }
+.sched-list.has-tabs .sched-day { margin-top: 1rem; }
+.sched-list.has-tabs .sched-session:last-child { border-bottom: 0; margin-bottom: 0; }
 </style>
 {% assign days = include.schedule | map: "day" | uniq %}
 {% assign keynotes = include.schedule | where_exp: "s", "s.keynote" %}
@@ -75,9 +82,9 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 </section>
 {% endif %}
 {% if days.size > 1 %}
-<ul class="sched-days" aria-label="Jump to day">
+<ul class="sched-days" role="tablist" aria-label="Choose a day">
 {% for day in days %}
-<li><a href="#{{ day | slugify }}">Day {{ forloop.index }}<small>{{ day }}</small></a></li>
+<li><a href="#{{ day | slugify }}" role="tab" id="tab-{{ day | slugify }}" aria-controls="{{ day | slugify }}">Day {{ forloop.index }}<small>{{ day }}</small></a></li>
 {% endfor %}
 </ul>
 {% endif %}
@@ -86,8 +93,12 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 {% assign day_number = 0 %}
 {% for session in include.schedule %}
 {% if session.day != current_day %}
+{% if current_day != "" %}
+</section>
+{% endif %}
 {% assign day_number = day_number | plus: 1 %}
-<h2 class="sched-day" id="{{ session.day | slugify }}">{% if days.size > 1 %}<small>Day {{ day_number }}</small>{% endif %}{{ session.day }}</h2>
+<section class="sched-day-panel" id="{{ session.day | slugify }}" role="tabpanel" aria-labelledby="tab-{{ session.day | slugify }}">
+<h2 class="sched-day">{% if days.size > 1 %}<small>Day {{ day_number }}</small>{% endif %}{{ session.day }}</h2>
 {% assign current_day = session.day %}
 {% assign current_time = "" %}
 {% endif %}
@@ -132,4 +143,46 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 </article>
 {% endif %}
 {% endfor %}
+{% if current_day != "" %}
+</section>
+{% endif %}
+<script>
+(function () {
+  var list = document.currentScript && document.currentScript.parentNode;
+  if (!list) { return; }
+  var tabs = Array.prototype.slice.call(list.querySelectorAll('.sched-days a[role="tab"]'));
+  var panels = Array.prototype.slice.call(list.querySelectorAll('.sched-day-panel'));
+  if (tabs.length < 2 || panels.length < 2) { return; }
+  list.classList.add('has-tabs');
+  function show(id) {
+    var match = panels.some(function (p) { return p.id === id; });
+    if (!match) { id = panels[0].id; }
+    panels.forEach(function (p) { p.hidden = p.id !== id; });
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('aria-controls') === id;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+    });
+    return id;
+  }
+  function fromHash() {
+    var hash = decodeURIComponent(location.hash.slice(1));
+    var target = hash ? document.getElementById(hash) : null;
+    var panel = target ? target.closest('.sched-day-panel') : null;
+    if (!panel) { show(null); return; }
+    show(panel.id);
+    (target === panel ? panel : target).scrollIntoView();
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = show(t.getAttribute('aria-controls'));
+      if (history.replaceState) { history.replaceState(null, '', '#' + id); }
+    });
+  });
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+})();
+</script>
 </div>

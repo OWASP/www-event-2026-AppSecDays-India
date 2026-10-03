@@ -1,0 +1,23 @@
+{%- comment -%}
+Home page "Supporting Partners" section.
+Reads _data/partners.yml (community, media and other non-sponsoring partners).
+When there are no partners yet, a call-to-action to become a partner is shown instead.
+{%- endcomment -%}
+{% assign partners = site.data.partners | where_exp: "p", "p.name" | sort_natural: "name" %}
+{% assign partner_contact = site.data.event-details.partner_contact_url | default: "https://owasp.wufoo.com/forms/p1uef3wk1lhcmt4" %}
+<section class="partners-front" id="supporting-partners">
+  <h3>Supporting Partners</h3>
+  {% if partners.size > 0 %}
+  <p class="partner-intro">Community, media and ecosystem partners helping us reach the Indian AppSec community.</p>
+  <div class="partner-logos">
+    {% for partner in partners %}
+    <a href="{{ partner.url }}" class="partner-logo" target="_blank" rel="noopener noreferrer" title="{{ partner.name }}"><img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}"></a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="partner-intro">We welcome OWASP chapters, community groups, universities and media partners to support OWASP AppSec Days India 2026.</p>
+  {% endif %}
+  <div class="partner-cta">
+    <a href="{{ partner_contact }}" class="cta-button blue" target="_blank" rel="noopener noreferrer">Become a Supporting Partner</a>
+  </div>
+</section>

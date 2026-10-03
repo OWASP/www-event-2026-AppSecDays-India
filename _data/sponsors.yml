@@ -1,6 +1,22 @@
+# Sponsors for OWASP Global AppSec Days India 2026.
+#
+# Rendered in the "Sponsors" section on the home page (_includes/sponsors-front.html),
+# and on /sponsors/ (pages/sponsors.md). The theme's footer sponsor band is
+# disabled by the local override in _includes/evnt-footer-2.0.html.
+# Logos live in assets/images/sponsors/.
+#
+# `type` is the sponsorship tier. Recognised tiers, in display order:
+#   Diamond Plus, Diamond, Platinum, Gold, Silver, Bronze, Keynote Sponsor,
+#   Lunch Sponsor, Coffee Break Sponsor, Networking Reception Sponsor,
+#   Lanyard Sponsor, Hotel Key Cards Sponsor
+#
+# Example entry:
 #  - logo: /assets/images/sponsors/logo_Google_FullColor_830x271px.png
 #    name: Google
 #    url: https://www.google.com
 #    backgroundSize: 125px
 #    type: Diamond
-
+- logo: /assets/images/sponsors/ArmorCode.png
+  name: ArmorCode
+  url: https://www.armorcode.com
+  type: Gold

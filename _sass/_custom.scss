@@ -26,3 +26,123 @@ $nav-blue: #233e81;
 .event .dropdown-menu:after {
   border-bottom-color: $nav-blue;
 }
+
+// Home page "Sponsors" and "Supporting Partners" bands (replace the theme's
+// keynote band). Rendered by _includes/sponsors-front.html and
+// _includes/partners-front.html via the local _layouts/event-x.html override.
+$brand-purple: #242158;
+
+.event .alt-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  background-color: transparent;
+  clear: both;
+
+  & > * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.event section.sponsors-front,
+.event section.partners-front {
+  margin: 0;
+  padding: 2.5em 1em 3em;
+  text-align: center;
+
+  h3 {
+    margin: 0 0 0.25em;
+    font-size: 1.75em;
+    font-weight: bold;
+  }
+
+  h4 {
+    margin: 1.5em 0 0.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.85;
+  }
+
+  .partner-intro {
+    max-width: 48em;
+    margin: 0.5em auto 1.5em;
+    line-height: 1.5em;
+  }
+
+  .partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em 2em;
+    margin: 0 auto 1em;
+    max-width: 1200px;
+  }
+
+  .partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 110px;
+    padding: 0.75em 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      margin: 0;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    }
+  }
+
+  .partner-cta {
+    margin-top: 1.5em;
+
+    .cta-button {
+      display: inline-block;
+    }
+  }
+}
+
+.event section.sponsors-front {
+  background-color: $brand-purple;
+  color: #fff;
+
+  h3, h4, .partner-intro {
+    color: #fff;
+  }
+}
+
+.event section.partners-front {
+  background-color: ghostwhite;
+  color: #333;
+
+  h3, h4, .partner-intro {
+    color: $brand-purple;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .event section.sponsors-front,
+  .event section.partners-front {
+    .partner-logo {
+      width: 160px;
+      height: 90px;
+    }
+  }
+}

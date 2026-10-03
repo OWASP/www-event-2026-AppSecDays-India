@@ -1,13 +1,17 @@
-# 2026 schedule, in the same format as schedule-2025.yml (Sched order, with start times).
+# 2026 schedule from the Day 1 / Day 2 agenda (21–22 November 2026, 11:00am–7:00pm IST).
+# Talk titles marked "Session N" are placeholders until the programme is named.
+# Speaker details are added on each session under `speakers:` when they are confirmed.
 # Sessions marked with `keynote:` are featured at the top of the schedule page and badged in the list.
-# The value is the label shown on the badge (e.g. "Opening Keynote", "Closing Keynote").
-# Speaker photos live in assets/images/speakers/2026/.
 
 - day: "Saturday, November 21"
-  time: "Time TBA"
+  time: "11:00am–11:15am"
   tz: "IST"
-  title: "Keynote - Opening"
-  venue: "Virtual"
+  title: "Welcome and opening remarks"
+
+- day: "Saturday, November 21"
+  time: "11:15am–12:00pm"
+  tz: "IST"
+  title: "Opening keynote"
   keynote: "Opening Keynote"
   speakers:
     - name: "Steve Springett"
@@ -23,6 +27,162 @@
         product leaders on software supply chain security, software transparency, and regulatory
         readiness. [LinkedIn](https://www.linkedin.com/in/stevespringett/)
 
-# Day marker only: renders the Day 2 heading and jump link until sessions are added.
+- day: "Saturday, November 21"
+  time: "12:00pm–12:30pm"
+  tz: "IST"
+  title: "Session 1"
+
+- day: "Saturday, November 21"
+  time: "12:30pm–1:00pm"
+  tz: "IST"
+  title: "Session 2"
+
+- day: "Saturday, November 21"
+  time: "1:00pm–1:30pm"
+  tz: "IST"
+  title: "Session 3"
+
+- day: "Saturday, November 21"
+  time: "1:30pm–2:00pm"
+  tz: "IST"
+  title: "Session 4"
+
+- day: "Saturday, November 21"
+  time: "2:00pm–2:30pm"
+  tz: "IST"
+  title: "Session 5"
+
+- day: "Saturday, November 21"
+  time: "2:30pm–3:00pm"
+  tz: "IST"
+  title: "Afternoon break"
+
+- day: "Saturday, November 21"
+  time: "3:00pm–3:30pm"
+  tz: "IST"
+  title: "Session 6"
+
+- day: "Saturday, November 21"
+  time: "3:30pm–4:00pm"
+  tz: "IST"
+  title: "Session 7"
+
+- day: "Saturday, November 21"
+  time: "4:00pm–4:30pm"
+  tz: "IST"
+  title: "Session 8"
+
+- day: "Saturday, November 21"
+  time: "4:30pm–5:00pm"
+  tz: "IST"
+  title: "Session 9"
+
+- day: "Saturday, November 21"
+  time: "5:00pm–5:30pm"
+  tz: "IST"
+  title: "Session 10"
+
+- day: "Saturday, November 21"
+  time: "5:30pm–6:00pm"
+  tz: "IST"
+  title: "Session 11"
+
+- day: "Saturday, November 21"
+  time: "6:00pm–6:30pm"
+  tz: "IST"
+  title: "Session 12"
+
+- day: "Saturday, November 21"
+  time: "6:30pm–7:00pm"
+  tz: "IST"
+  title: "Session 13"
+
 - day: "Sunday, November 22"
-  placeholder: true
+  time: "11:00am–11:30am"
+  tz: "IST"
+  title: "Session 1"
+
+- day: "Sunday, November 22"
+  time: "11:30am–12:00pm"
+  tz: "IST"
+  title: "Session 2"
+
+- day: "Sunday, November 22"
+  time: "12:00pm–12:30pm"
+  tz: "IST"
+  title: "Session 3"
+
+- day: "Sunday, November 22"
+  time: "12:30pm–1:00pm"
+  tz: "IST"
+  title: "Session 4"
+
+- day: "Sunday, November 22"
+  time: "1:00pm–1:30pm"
+  tz: "IST"
+  title: "Session 5"
+
+- day: "Sunday, November 22"
+  time: "1:30pm–2:00pm"
+  tz: "IST"
+  title: "Session 6"
+
+- day: "Sunday, November 22"
+  time: "2:00pm–2:30pm"
+  tz: "IST"
+  title: "Session 7"
+
+- day: "Sunday, November 22"
+  time: "2:30pm–3:00pm"
+  tz: "IST"
+  title: "Afternoon break"
+
+- day: "Sunday, November 22"
+  time: "3:00pm–3:30pm"
+  tz: "IST"
+  title: "Session 8"
+
+- day: "Sunday, November 22"
+  time: "3:30pm–4:00pm"
+  tz: "IST"
+  title: "Session 9"
+
+- day: "Sunday, November 22"
+  time: "4:00pm–4:30pm"
+  tz: "IST"
+  title: "Session 10"
+
+- day: "Sunday, November 22"
+  time: "4:30pm–5:00pm"
+  tz: "IST"
+  title: "Session 11"
+
+- day: "Sunday, November 22"
+  time: "5:00pm–5:30pm"
+  tz: "IST"
+  title: "Session 12"
+
+- day: "Sunday, November 22"
+  time: "5:30pm–6:00pm"
+  tz: "IST"
+  title: "Session 13"
+
+- day: "Sunday, November 22"
+  time: "6:00pm–6:30pm"
+  tz: "IST"
+  title: "Session 14"
+
+- day: "Sunday, November 22"
+  time: "6:30pm–7:00pm"
+  tz: "IST"
+  title: "Session 15"
+
+- day: "Sunday, November 22"
+  time: "7:00pm–7:15pm"
+  tz: "IST"
+  title: "Conference closing remarks"
+  speakers:
+    - name: "Vandana Verma Sehgal"
+      image: vandana-verma-sehgal.jpg
+      position: "Security Leader"
+      company: "Snyk"
