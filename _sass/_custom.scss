@@ -6,6 +6,35 @@ $nav-blue: #233e81;
   background-color: $nav-blue;
 }
 
+// Theme sets the desktop menu at 15px. Two sizes larger so the
+// Home / Schedule / Exhibit / Previous Conference / About labels read more easily.
+// font-size: 0 on the list collapses the gap from whitespace between items
+// so the longer labels still fit on one line above the mobile breakpoint.
+.event .top-nav > ul {
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.event .top-nav > ul > li {
+  font-size: 17px;
+}
+
+@media (max-width: 1200px) {
+  .event .top-nav > ul > li > a {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .event .top-nav > ul > li:first-child > a {
+    margin-left: 0;
+  }
+}
+
+.event .mobile-menu li,
+.event .mobile-menu .accordion {
+  font-size: 16px;
+}
+
 .event .dropdown-menu li {
   background-color: $nav-blue;
   color: #fff;
