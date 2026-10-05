@@ -5,6 +5,8 @@ Usage: {% include speaker_list.html schedule=site.data.schedule-2025 year="2025"
 Optional per-session keys in the schedule data:
   keynote: "Opening Keynote"   Featured in the "Keynote Speakers" strip at the top and badged in the schedule.
                                Any non-empty value works; the string is used as the badge label.
+  outline: "..."               Public talk description. Only the 2026 schedule turns the title into a
+                               closed disclosure that expands to this text. Other years leave the title as a heading.
 Multi-day schedules automatically get Day 1 / Day 2 tabs: each day is its own panel and only one is
 shown at a time. Links to #<day-slug> or #session-N open the matching day. Without JavaScript every
 day is listed in order.
@@ -17,6 +19,16 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 .sched-time { margin: 1.1em 0 0.35em; color: #242158; }
 .sched-session { margin: 0 0 1rem; padding: 0 0 0.9rem; border-bottom: 1px solid #ddd; scroll-margin-top: 5rem; }
 .sched-session h4 { margin: 0 0 0.15em; }
+{% if include.year == "2026" %}
+.sched-talk { margin: 0 0 0.15em; }
+.sched-talk summary { cursor: pointer; list-style-position: outside; }
+.sched-talk summary h4 { display: inline; margin: 0; }
+.sched-talk summary:hover h4 { text-decoration: underline; }
+.sched-outline { margin: 0.45rem 0 0; max-width: 42rem; }
+.sched-outline p { margin: 0.45rem 0 0; }
+.sched-outline p:first-child { margin-top: 0; }
+.sched-outline ul, .sched-outline ol { margin: 0.35rem 0 0; padding-left: 1.25rem; }
+{% endif %}
 .sched-venue { color: #555; font-style: italic; }
 .sched-people { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 0.6rem; }
 .sched-person { display: flex; gap: 0.75rem; align-items: flex-start; max-width: 100%; }
@@ -114,7 +126,16 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 {% if session.keynote %}
 <span class="sched-badge">{{ session.keynote }}</span>
 {% endif %}
+{% if include.year == "2026" and session.outline %}
+<details class="sched-talk">
+<summary><h4>{{ session.title }}</h4></summary>
+<div class="sched-outline">
+{{ session.outline | replace: "|", "&#124;" | markdownify }}
+</div>
+</details>
+{% else %}
 <h4>{{ session.title }}</h4>
+{% endif %}
 {% if session.venue %}
 <div class="sched-venue">{{ session.venue }}</div>
 {% endif %}
@@ -130,10 +151,6 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 {% if speaker.position or speaker.company %}
 <br>
 <em>{% if speaker.position %}{{ speaker.position }}{% endif %}{% if speaker.position and speaker.company %}, {% endif %}{% if speaker.company %}{{ speaker.company }}{% endif %}</em>
-{% endif %}
-{% if speaker.bio %}
-{% comment %}Pipes are escaped first: kramdown treats "|" as a table cell, which turned pipe-separated bios into tables.{% endcomment %}
-{{ speaker.bio | replace: "|", "&#124;" | markdownify }}
 {% endif %}
 </div>
 </div>

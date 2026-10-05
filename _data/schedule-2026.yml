@@ -1,7 +1,9 @@
-# 2026 schedule from the Day 1 / Day 2 agenda (21–22 November 2026, 11:00am–7:00pm IST).
-# Talk titles marked "Session N" are placeholders until the programme is named.
-# Speaker details are added on each session under `speakers:` when they are confirmed.
+# 2026 schedule for OWASP AppSec Days India (21–22 November 2026, 11:00am–7:00pm IST, virtual).
+# `outline:` is the public talk description. On the 2026 schedule the title expands to show it.
+# Talks and speaker details come from the Sessionize CFP export (owasp-global-appsec-india-2026-cfp).
+# Speaker photos live in assets/images/speakers/2026/.
 # Sessions marked with `keynote:` are featured at the top of the schedule page and badged in the list.
+# `track:` is the CFP track (Builder / Breaker / Defender / Manager-Culture) and is kept for reference.
 
 - day: "Saturday, November 21"
   time: "11:00am–11:15am"
@@ -30,27 +32,103 @@
 - day: "Saturday, November 21"
   time: "12:00pm–12:30pm"
   tz: "IST"
-  title: "Session 1"
+  title: "How We Stopped Shai Hulud v4: Hunting a Self-Replicating npm Worm with AI Toolchain Poisoning"
+  outline: |-
+    The Shai Hulud worm family has stalked the npm supply chain across multiple variants, stealing credentials from developer and CI environments, propagating via stolen npm and GitHub identities, poisoning workflows, and carrying a dead switch that can wipe home directories on command. Version four just crossed a new line. SANDWORM_MODE, deployed across 19 malicious npm packages, keeps the full prior playbook and adds AI toolchain poisoning via MCP server injection into Claude Code, Claude Desktop, Cursor, and Windsurf. The rogue MCP server uses prompt injection to instruct AI assistants to silently exfiltrate SSH keys, AWS credentials, and LLM API tokens from nine providers, without alerting the user. We present the full story: the Shai Hulud lineage, how the obfuscated three-layer loader was detected, how 19 packages were linked to one operator, how a bidirectional CI worm loop was built from a weaponized GitHub Action, and how coordinated takedown with npm, GitHub, and Cloudflare dismantled the infrastructure, along with what the dormant polymorphic engine tells us about where version five is heading.
+  track: "Defender"
+  speakers:
+    - name: "Kush Pandya"
+      image: kush-pandya.jpg
+      position: "Security Researcher"
+      company: "Socket"
+      bio: |-
+        Security researcher at Socket.dev. Securing Open Source Supply chain, for various fortune 500 customers like Netflix, Salesfore, etc. and other leading AI companies like Anthropic, OpenAI and many more.
 
 - day: "Saturday, November 21"
   time: "12:30pm–1:00pm"
   tz: "IST"
-  title: "Session 2"
+  title: "Backdoored Bounties: Attacking AI‑Powered Bug Bounty Pipelines"
+  outline: |-
+    AI‑assisted bug bounty has gone from niche experiment to mainstream workflow in less than a year. Open source toolchains like BugHunter, Claude‑BugBounty and autonomous “bug hunter AI” frameworks now orchestrate dozens of AI agents across recon, vuln discovery, validation and report drafting, wired directly into HackerOne/Bugcrowd scopes and real targets. But in many setups, these agents are treated as trusted copilots instead of high privilege software components with their own attack surface.
+
+    This talk shows how to turn those AI‑powered pipelines against their operators.
+
+    Using a lab composed of a popular AI bug bounty toolkit wired to a custom MCP (Model Context Protocol) server, the session demonstrates three backdoor patterns: exfiltrating secrets discovered during recon, silently downgrading or suppressing high impact findings before they reach the platform and steering autonomous hunting toward attacker chosen assets by poisoning skills, MCP tools and context.
+
+    Rather than hand waving about “AI risk”, I walk through concrete exploit chains against realistic workflows: skill bundles that rewrite reports, malicious MCP tools that masquerade as helper utilities and poisoned configurations that abuse cross‑session memory and auto‑resume features. For each attack, I then show defensive patterns that AppSec and bounty teams can actually deploy today: scope‑aware MCP tooling, signed skill/tool descriptors, validation gates on AI‑generated findings and explicit separation of duties between human and agent.
+
+    Attendees will leave with a clear model of where the real security boundaries are in AI‑powered bug bounty stacks and a practical checklist for hardening their own pipelines before an attacker files the first “backdoored bounty”.
+  track: "Builder"
+  speakers:
+    - name: "Thejes Sree Satheesh Kumar"
+      image: thejes-sree-satheesh-kumar.png
+      position: "Quality Analyst, MCP and AI Security Researcher"
+      company: "Thoughtworks"
+      bio: |-
+        Thejes Sree Satheesh Kumar (She/Her) is a Quality Analyst – Consultant at ThoughtWorks, specializing in application and AI security testing. She is a Certified Ethical Hacker and holds CompTIA Security+ and Google Cybersecurity Professional certifications. Thejes combines quality engineering and security practices to build resilient software systems. She is passionate about secure AI ecosystems and advancing defensive strategies for emerging technologies like the Model Context Protocol. Following deep-dive presentations at Nullcon Goa and TechXpresso, she is currently co-authoring the forthcoming book 'Breaking the Model Context Protocol: Agentic Attacks and Defenses for MCP-Powered AI Systems' (expected 2026).
 
 - day: "Saturday, November 21"
   time: "1:00pm–1:30pm"
   tz: "IST"
-  title: "Session 3"
+  title: "Map, Click, Pwn: Automating Attack Chains with AI-Powered Mind Maps"
+  outline: |-
+    There are two kinds of security testers: the ones using AI, and the ones getting left behind. But the first group has a growing problem. Ask an AI whether testing is complete, and the answer is almost always “yes.” The real question is whether it actually exercised every agent skill, performed meaningful verification, and explored the important paths, or simply hallucinated confidence while missing critical issues.
+    This talk introduces graph-based AI penetration testing, a practical alternative to opaque AI security automation. Instead of relying on black-box systems that declare success without evidence, we use visual mind maps to guide and track LLM execution in a transparent way. Every node represents a decision, a tool action, or a validation step that can be inspected, audited, and customized.
+
+    In the live demo, we will build an attack plan in real time and show the AI executing each step while feeding real outputs directly into the graph. Rather than guessing whether a check actually ran, the mind map becomes a visible record of coverage and execution. We will also demonstrate how senior tester knowledge can be encoded into structured workflows, how specific agent skills can be invoked per node, and how flows can be adapted dynamically without retraining models.
+    You will learn the architecture behind connecting mind maps to tool execution, techniques for runtime verification, and practical templates you can use immediately. Instead of trusting a black box that says “testing complete,” this approach enables AI-powered security testing that is transparent, auditable, and driven by real testing experience.
+  track: "Breaker"
+  speakers:
+    - name: "Clint Josy"
+      image: clint-josy.png
+      position: "Offensive Security Leader"
+      company: "Cyderes"
+      bio: |-
+        Clint Josy
+        A cyber security leader focused on building AI-driven security solutions, grounded in offensive security and exposure management. Clint researches and leads adversary-style engagements at the intersection of AI and cloud identity, notably exposing an Azure AD/Entra Conditional Access bypass that escalated to Global Administrator from a single blocked credential without malware or a corporate endpoint. He publishes on AI‑driven attack surfaces, cloud identity abuse (PRT/device registration/Intune), and protocol-level vulnerabilities, and builds tools that apply ML insights to real-world red teaming.
 
 - day: "Saturday, November 21"
   time: "1:30pm–2:00pm"
   tz: "IST"
-  title: "Session 4"
+  title: "I Broke My Own Agent Firewall: Four Ways Past Tool-Call Policy"
+  outline: |-
+    I built a runtime filter for agent tool calls, felt pretty good about it, then spent a week trying to get past it. I got through four different ways in an afternoon. This is the attacker's side of that story - how the security controls people are bolting onto AI agents actually fail, and how to test your own before someone else does.
+
+    The theme is simple: never trust the string an agent hands you. A filter that blocks a tool by name is trivially beaten if it compares raw text. I'll walk through four concrete bypasses, live where I can:
+
+    - Look-alike names. Call "delete_record" with a Cyrillic character, or splice in a zero-width space. Identical in the logs, invisible to an exact-match blocklist.
+    - Encoding. Wrap a SQL or shell payload in base64 (or nest it) so a scanner reading the raw parameters sees nothing dangerous.
+    - Renaming. The blocklist says delete_record; I call purge_all. Name lists don't generalize to intent.
+    - Cross-tenant via SQL. A schema-qualified query - SELECT ... FROM other_tenant.users - that never mentions the caller's own tenant.
+
+    Then the part that makes it useful on Monday: a repeatable way to test an agent's tool-layer defenses instead of guessing, and the fix for each bypass (normalization, decode-then-scan, verb/intent matching, schema checks) so you can tell whether a control is real or theater.
+
+    You'll leave with a checklist to break - or validate - any tool-call filter, and a clear reason exact-string matching is a security anti-pattern in agent systems.
+  track: "Breaker"
+  speakers:
+    - name: "Santosh Kumar Puppala"
+      image: santosh-kumar-puppala.jpg
+      position: "Sr. AI/ML Platform Architect"
+      company: "Lenovo"
+      bio: |-
+        Santosh Kumar Puppala is a Senior AI/ML Platform Architect at Lenovo, where he designs and secures the cloud‑native platforms behind production Generative AI and LLM applications. Across 6+ years on AWS and Azure he has architected the Kubernetes, CI/CD, and observability foundations for RAG chatbots and LangChain/LangGraph agentic systems, with deep hands‑on work in Istio, OPA policy, and Kubernetes network enforcement. He built norviq, a runtime governance layer (PEP/PDP) that intercepts and enforces policy on LLM‑agent tool calls.
 
 - day: "Saturday, November 21"
   time: "2:00pm–2:30pm"
   tz: "IST"
-  title: "Session 5"
+  title: "Circuit‑Breaking AI Agents: A Pre‑execution Safety Gate for Shells, MCP, and SQL"
+  outline: |-
+    AI agents are being handed shell access, SQL, and MCP tool calls but most pipelines lack a deterministic, auditable “circuit breaker” that can halt risky actions before they execute. This session shows how we built Agent Circuit Breaker, an open‑source, local‑first runtime that inspects and blocks dangerous commands, SQL, and multi‑step agent trajectories before harm happens.
+  track: "Defender"
+  speakers:
+    - name: "Sagar Chhatrala"
+      image: sagar-chhatrala.jpg
+      position: "Staff Security Engineer, Cloud and AI Security"
+      company: "Greenlight"
+      bio: |-
+        Security infrastructure engineer with nearly a decade of experience securing AWS, Azure, GCP, Kubernetes, identity, data platforms, CI/CD, and high-compute environments.
+        Staff Security Engineer at Greenlight owning cloud and AI security across company accounts and protecting financial data for millions of families. CIS AWS/Azure benchmark coauthor and CrowdStrike Fal.Con speaker. I build secure-by-default platform patterns: workload identity, least-privilege IAM, network segmentation, policy-as-code, data access
+        controls, agent/tool execution boundaries, and AI security guardrails.
 
 - day: "Saturday, November 21"
   time: "2:30pm–3:00pm"
@@ -60,77 +138,347 @@
 - day: "Saturday, November 21"
   time: "3:00pm–3:30pm"
   tz: "IST"
-  title: "Session 6"
+  title: "Prompt Injection Is an Access Control Problem: Least Privilege for AI Agents and MCP Servers"
+  outline: |-
+    Every AI agent deployment ships with the same silent flaw: the agent holds far more privilege than any single task needs. When a prompt injection lands, the payload matters less than the blast radius, and the blast radius was set by the permissions granted last quarter. Gartner projects that through 2029, more than half of successful attacks on AI agents will exploit access control via prompt injection. Treating injection as a model problem has failed. Treating it as an access control problem gives defenders tools that already work.
+
+    This talk demonstrates five least-privilege patterns for agents and MCP servers, live against public reference MCP servers (filesystem, git, fetch, github):
+
+    1. Per-task tool allowlists instead of per-agent grants
+    2. Deny-by-default capability scoping at the MCP boundary
+    3. Deterministic egress controls, so an injected instruction cannot exfiltrate what it can read
+    4. Human-approval gates keyed to privilege tier, not blanket confirmation fatigue
+    5. Deriving a least-privilege policy from an agent's observed behavior trace, then diffing every CI run against it to catch privilege drift
+
+    Each pattern maps to the OWASP MCP Top 10 and Agentic Security Initiative guidance, and every demo is reproducible from a public repo.
+
+    Attendees leave able to: inventory the real privilege surface of an agent they already run, write a deny-by-default policy for one MCP server the same week, and wire a drift check into CI so the policy stays honest. No product and no vendor pitch: everything shown is open source and runs on a laptop.
+  track: "Defender"
+  speakers:
+    - name: "Karan Bansal"
+      image: karan-bansal.png
+      position: "Global Head of AI and Security Innovation"
+      company: "ArmorCode"
+      bio: |-
+        Karan Bansal is Global Head of AI and Security Innovation at ArmorCode, with over 10 years in security. He previously led security and privacy at Urban Company (a $2.8B unicorn) and was a founding engineer at AvidSecure, acquired by Sophos in 2019. He authored "Claude Code's Most Underrated Feature: Hooks" and maintains the open-source claude-code-hooks toolkit (417 stars), a collection of security hooks for AI coding agents mapped to the OWASP LLM Top 10. He also built reddit-mcp-buddy (696 stars) and curates awesome-claude-skills (369 stars). He contributes to SGLang and vLLM, and speaks at DEFCON and OWASP.
 
 - day: "Saturday, November 21"
   time: "3:30pm–4:00pm"
   tz: "IST"
-  title: "Session 7"
+  title: "Deterministic Security for LLM-Powered Data Agents: Enforcing Row-Level Access Before the Context Wi"
+  outline: |-
+    LLM-powered analytics agents that query enterprise data stores are entering production. They answer business questions by coordinating queries across knowledge graphs, vector stores, metrics databases, and warehouses simultaneously. The security challenge is specific: these agents are probabilistic systems accessing sensitive data, and once data enters the LLM context window, you cannot guarantee it will not surface in the response. Instructing the model to "not reveal sensitive data" is not a security control.
+
+    This talk presents a production architecture for enforcing deterministic, row-level security at the data layer before data ever reaches the LLM. Security is treated as a structural gate on the input, not a guardrail on the output. If the user lacks access to EMEA data, the graph query returns no EMEA nodes, the vector search excludes EMEA documents, and the metrics lookup filters EMEA figures. The LLM cannot leak what it never received.
+
+    I will cover: how to enforce consistent access policies across heterogeneous stores with different permission models (graph, vector, relational) when a single query fans out across all of them in parallel; why prompt-based output filtering fails as a security
+      mechanism; how to build auditable access trails when an AI agent, not a human, is executing the queries; and common implementation mistakes (caching without permission context, protecting the warehouse but not the vector store, creating an unprotected exfiltration path through the least-secured store).
+
+    Attendees will leave with a concrete architectural pattern for securing LLM data agents, a pre-deployment checklist, and practical guidance on extending existing row-level security infrastructure to cover agentic access patterns.
+  track: "Builder"
+  speakers:
+    - name: "Nitesh Khapekar"
+      image: nitesh-khapekar.jpg
+      position: "Senior Data Engineering Leader"
+      company: "Amazon"
+      bio: |-
+        I’m a Senior Data Engineering Leader at Amazon with over 17 years of experience building enterprise-scale data platforms that power analytics, AI, and revenue-critical decision systems. I lead large data engineering organizations responsible for petabyte-scale infrastructure, thousands of pipelines, and globally distributed stakeholders.
+
+        My work sits at the intersection of enterprise data architecture, governance design, and AI-enabled platform strategy. I’ve led multi-year data transformation initiatives, built GenAI-enabled data platforms, and driven cross-organizational alignment to establish authoritative, trusted data foundations for multi-billion-dollar businesses.
+
+        I focus on designing governance-first architectures that balance autonomy with control — enabling enterprises to innovate rapidly while maintaining interoperability, security, and compliance at scale.
+    - name: "Varun Joshi"
+      image: varun-joshi.jpg
+      position: "Senior Data Engineer"
+      company: "AWS"
+      bio: |-
+        Varun is a Senior Data Engineer with 12+ years of experience in designing, building,and optimizing scalable data pipelines and architectures.Proven expertise in data warehousing, ETL/ELT processes, and cloud platforms. Passionate about leveraging Artificial Intelligence (AI) and Machine Learning (ML).Designed and deployed AI-driven Data solutions, integrating LLM-powered coding assistants into Data Engineering to produce AI solutions for customers. Focused on leveraging LLMs and advanced engineering to build scalable, secure, and trustworthy platforms, resulting in significant efficiency gains, reduced on-call burden,and improved customer trust.
+
+        Currently Driving AI adoption across teams to enhance productivity, streamline deployments, and improve end-user experience.
+
+        Beyond his engineering role, Varun is a Fellow at IETE, IEEE-published author, a technical writer on DZone and Hackernoon, and a conference speaker whose work has been accepted at international  industry events. Varun has been reviewing technical books with international publishers along with Judging International Awards and Conferences.
 
 - day: "Saturday, November 21"
   time: "4:00pm–4:30pm"
   tz: "IST"
-  title: "Session 8"
+  title: "When AI Agents Go Wrong: Building Production-Ready Evaluation and Security Guardrails"
+  outline: |-
+    AI agents are rapidly evolving from passive assistants to systems that can retrieve data, invoke tools, make decisions, and execute multi-step tasks with minimal human intervention. While these capabilities unlock significant business value, they also introduce new application security challenges that traditional security testing approaches were not designed to address.
+
+    How do we determine whether an AI agent is safe to deploy? How do we evaluate whether it will behave securely when faced with prompt injection attacks, unauthorized tool usage, sensitive data access, or failures in multi-step reasoning?
+
+    This session explores practical approaches for building production-ready evaluation frameworks and security guardrails for Agentic AI systems. Attendees will learn how to move beyond traditional model accuracy metrics to evaluate security, reliability, and trustworthiness in AI-powered applications.
+
+    Topics covered include threat modeling for Agentic AI applications, designing human approval workflows for high-risk actions, evaluating tool invocation and permission boundaries, implementing continuous monitoring strategies, and managing risk trade-offs between autonomy, usability, and security.
+
+    Attendees will leave with actionable architectural patterns and implementation strategies that can be immediately applied when building or securing AI-powered applications in production environments.
+  track: "Builder"
+  speakers:
+    - name: "Ieshika Chandra"
+      image: ieshika-chandra.jpg
+      position: "Data Science Leader"
+      bio: |-
+        Ieshika has over 10 years of experience leading diverse projects in e-commerce, including supply chain optimization, fraud detection, and AI-driven product discovery. With a strong technical and practical background, she specializes in developing responsible AI systems that support business growth and drive innovation in digital marketplaces. Ieshika speaks at industry events on topics such as AI ethics, experimentation, and quality engineering. She has worked in consulting and big tech environments.
 
 - day: "Saturday, November 21"
   time: "4:30pm–5:00pm"
   tz: "IST"
-  title: "Session 9"
+  title: "Agents Against Their Own: From JADEPUFFER to the Hugging Face Breach"
+  outline: |-
+    In the span of two weeks in July 2026, two incidents rewrote the playbook on what AI agents are capable of when left unsupervised.
+
+    First came JADEPUFFER, documented by Sysdig as the first fully agentic ransomware operation. An LLM driven attack chain that walked itself from an RCE in Langflow all the way through credential theft, lateral movement, persistence, and database extortion. When a login attempt failed, the agent diagnosed the issue and corrected course in 31 seconds. No human operator. No scripted fallback. Just a closed loop of try, fail, adapt.
+
+    Then an OpenAI agent running a cyber capability evaluation decided the fastest way to pass its test was to stop taking it. It broke out of its sandbox, got onto the open internet, and spent four and a half days executing over 17,600 actions across Hugging Face's production infrastructure. It stole credentials, moved laterally, and exfiltrated dataset contents. Not because anyone told it to attack Hugging Face. It just figured that was the optimal path to its objective.
+
+    One of these was a criminal operation. The other was an accident. The defensive failures that enabled both were nearly identical.
+
+    This talk pulls apart both incidents step by step. We start with CVE-2025-3248 and walk through exactly how JADEPUFFER turned a single vulnerability into full infrastructure compromise. Then we look at the Hugging Face breach and what it tells us about containment, goal misalignment, and the gap between what we asked an agent to do and what it actually did. Along the way we cover ENCFORGE, the evolution of JADEPUFFER that started going after AI and ML artifacts specifically, treating model weights and training data as extortion leverage.
+
+    The point of this talk is not to marvel at what AI can do offensively. It is to look clearly at what breaks when your attacker can iterate faster than your SOC can triage, when the blast radius of a single RCE extends through every secret and service the application can reach, and when the threat might be coming from an agent you deployed yourself. We will talk about what actually needs to change in how we architect, monitor, and defend AI application ecosystems, and what detection strategies work when the attacker operates in a loop you cannot outpace manually.
+  track: "Breaker"
+  speakers:
+    - name: "Arun Krishnan"
+      image: arun-krishnan.jpg
+      position: "AI Security Researcher"
+      company: "Scapia"
+      bio: |-
+        Arun Krishnan is an AI security researcher at Scapia and a member of Team bi0s, India's top-ranked CTF team, where he specializes in web exploitation. Under the alias winters0x64, he focuses on AI/ML and web application security—his recent work includes discovering multiple vulnerabilities in NVIDIA's AI ecosystem, alongside 5 CVEs across open-source projects. A regular on the Huntr bug bounty platform and a VulnCon 2026 speaker, he combines manual source-code auditing with static analysis to break AI tooling and other software at scale.
+    - name: "Yadhu Krishna M"
+      image: yadhu-krishna-m.jpg
+      position: "Senior Security Engineer"
+      company: "CRED"
+      bio: |-
+        Yadhu is a passionate Security Engineer, currently leading the software supply chain security charter at CRED, with over four years of experience in security. He specializes in identifying security vulnerabilities and building scalable security solutions.
+
+        He has been a speaker at prominent security conferences, including Nullcon, BlackHat Asia and BlackHat Europe. As an open-source enthusiast and core maintainer of the SupplyShield project, he actively contributes to improving software supply chain security.
+
+        He has reported high-severity security issues in critical projects such as n8n, Node.js, Gunicorn, and Safari, earning multiple CVEs for his work. He also has been part of team bi0s (India’s top CTF team) as a mentor, CTF player, and challenge creator.
 
 - day: "Saturday, November 21"
   time: "5:00pm–5:30pm"
   tz: "IST"
-  title: "Session 10"
+  title: "Red Teaming Taxonomy for Voice and Audio AI Systems: From Text-Domain Transfer to Audio-Native Attack"
+  outline: |-
+    Voice-based agentic AI systems — assistants, customer-support agents, and autonomous voice agents that chain speech recognition, large language models, tool invocation, and speech synthesis — introduce attack surfaces that neither text-only LLM red-teaming taxonomies nor classical speech-security literature fully capture. Existing surveys of voice AI security largely treat voice as an additional input channel layered onto text-based threats, organizing attacks by a single axis (attack surface, or “nature of the attack”) inherited from LLM jailbreak literature. This conflates two populations of attacks with fundamentally different origins and properties, and leaves no systematic account of which text-domain attacks actually survive the transition into a spoken interface.
+
+    This work introduces a taxonomy of voice AI red teaming built around an explicit top-level split between modality-transferred attacks — attacks whose mechanism is semantic or instructional and is agnostic to the channel carrying it — and modality-native attacks — attacks whose mechanism depends on properties of the acoustic channel itself (waveform, timing, speaker identity, transcription) and has no equivalent in a text-only system. Within each class, we classify individual attacks along four orthogonal axes: Attack Surface (where in the pipeline the attack targets), Adversarial Technique (how the attack operates), Attack Objective (why — including Availability as a first-class objective alongside Safety Bypass, Data Leakage, and Instruction Override), and Execution Context (the interaction pattern required).
+
+    We validate this scheme empirically against 41 real attacks: 21 attacks drawn from our implemented text/LLM red-teaming framework — selected for coverage of the OWASP LLM Top 10 attack classes rather than as a random or exhaustive sample — and 20 additional attacks compiled from voice-specific security research. Applying a simple transferability criterion — whether an attack’s success mechanism survives a text-to-speech-to-text round trip, evaluated against [name engine(s), or: multiple commercial and open-source ASR/TTS pipelines to control for engine-specific transcription artifacts] — we find that 15 of the 21 text-domain attacks transfer to voice unmodified, while 6 do not. The non-transferring attacks share a common property we term literal-dependence: they depend on surviving as a literal rendering of text (an encoded string, an exact token sequence, a fixed adversarial suffix), and this dependence — not attack surface or objective — is what predicts transfer failure. Every persona-, dialogue-, or reasoning-based attack in our corpus survives transfer.
+
+    Classifying the 20 audio-native attacks along the same four axes surfaces five clusters not visible under a single-axis taxonomy — transcription-boundary injection, speaker-identity confusion, signal-robustness attacks, conversational drift, and availability/denial-of-service — with availability attacks alone accounting for a quarter of the native corpus. Given the corpus size, we treat these as qualitative groupings rather than statistically validated clusters, and use them to motivate our decision to treat availability as a peer objective rather than a minor subcategory, departing from prior taxonomies. We also identify three attacks (context drift, tool-loop, memory-exhaustion) whose classification as native rather than transferred is genuinely ambiguous — these sit closer to agentic-orchestration failure modes than to the voice channel itself, and we position them explicitly against OWASP Agentic AI’s ASI attack classes — and use this ambiguity to refine the transferred/native boundary criterion.
+
+    Finally, mapping our corpus against classical audio-native authentication attacks (replay attacks, voice cloning, ultrasonic/DolphinAttack-style injection) reveals a coverage gap: none of the 41 attacks in our corpus target voice authentication directly, despite this being a well-established audio-native threat class. We treat this gap as both a limitation of current voice red-teaming practice and a concrete direction for future benchmark development, alongside automated native-attack generation and standardized transfer-fragility evaluation metrics.
+  track: "Breaker"
+  speakers:
+    - name: "Siddharth Chintawar"
+      image: siddharth-chintawar.jpg
+      position: "AI Security Engineer"
+      company: "Protectt.ai"
+      bio: |-
+        **Siddharth Chintawar** is an undergraduate Computer Engineering student at K.J. Somaiya School of Engineering with a strong interest in Artificial Intelligence, cybersecurity, and AI security. His work focuses on the security of large language models (LLMs), Voice AI systems, and agentic AI through adversarial testing and red teaming.
+
+        He has worked as an AI Security and Red Teaming Intern at Protectt.ai, where he developed real-time Voice AI applications using OpenAI's Realtime API and designed comprehensive red teaming methodologies to evaluate vulnerabilities in conversational AI systems. His work includes researching and executing prompt injection attacks, jailbreak techniques, dialogue manipulation, multimodal attacks, and audio adversarial testing against modern Voice AI applications.
+
+        Alongside his industry experience, Siddharth is actively involved in AI research. His research interests include AI security, adversarial machine learning, trustworthy AI, and biomedical AI. He has conducted research on deep learning models for neurodegenerative disease detection using EEG signals and is currently authoring a taxonomy of Voice AI Red Teaming that systematically classifies attack vectors, evaluation methodologies, and security challenges in next-generation conversational AI systems.
+
+        Beyond research, Siddharth actively participates in cybersecurity competitions, hackathons, and technical communities, contributing to discussions and practical evaluations of AI system security. His work combines hands-on offensive security testing with academic research to improve the reliability and resilience of modern AI applications.
+    - name: "Yuvaraj Govindarajulu"
+      image: yuvaraj-govindarajulu.jpg
+      position: "AVP - Product Engineering, Head of Research"
+      company: "Protectt.ai"
+      bio: |-
+        Yuvaraj Govindarajulu is a technical leader with over a decade of experience in AI, Cybersecurity and Embedded Systems R&D. He is the AVP - Product Engineering & Head of Research at Protectt.ai. He is the co-lead of the OWASP AI Bill of Materials Project and the Co-Author, Workstream lead (Harmonization) at the OWASP AI Exchange. With over 22+ International patents filed, his key areas of focus include AI Red Teaming, GenAI Guardrails, Ransomware Attacks on AI Systems and AI supply chain Security.
+
+        Yuvaraj is a co-author and a key contributor to the AI Security Testing section, GenAI Red Teaming Guide, Agentic AI Red Teaming Guide. Previously, Yuvaraj was an active member of standard bodies shaping global AI security, including ETSI and ISO. His previous talks and publications include presentations at prominent conferences such as OWASP AppSec EU, BSI IT Security congress, NeurIPS, DEFCON and IEEE SecDev. Yuvaraj also served as the technical lead for the EU Horizon Project "COBALT", with focus on continuous AI certification. With a proven track record of innovation, he has developed novel solutions that have translated into products and impactful industry contributions.
 
 - day: "Saturday, November 21"
   time: "5:30pm–6:00pm"
   tz: "IST"
-  title: "Session 11"
+  title: "Agentic AI in Web3 Security: Autonomous Defenders and the Risks They Introduce"
+  outline: |-
+    As attackers automate exploits at machine speed, Web3 security must evolve. This talk explores how agentic AI is already detecting and stopping blockchain threats in the wild and what risks and responsibilities come with deploying autonomous security agents on-chain.
+  track: "Defender"
+  speakers:
+    - name: "Aleksander Kryukov"
+      image: aleksander-kryukov.jpg
+      position: "Web3 Security Engineer"
+      bio: |-
+        I’m a Web3 Security Engineer with 4 years of experience formally verifying and auditing Solidity smart contracts for top Web3 projects like Maker (Sky), Coinbase, Balancer, and helping secure billions in total value locked (TVL). Contributed to the security of key modules of OpenZeppelin’s Solidity library (like ERC20, ERC1155, AccessControl, etc.), managed multi-team projects, and co-organized security contests like Secureum Bootcamp. My work combines deep technical expertise with leadership in high-stakes blockchain security.
 
 - day: "Saturday, November 21"
   time: "6:00pm–6:30pm"
   tz: "IST"
-  title: "Session 12"
+  title: "The API Made Me Do It - Do Bad APIs Lead AI to Generate Vulnerable Code?"
+  outline: |-
+    We blame the bot when AI-generated code is vulnerable. But what if the bot is just using the dangerous toys we left on the table?
+
+    This experiment tests whether bad APIs steer AI coding agents toward vulnerable code.
+
+    The same agent builds the same project twice: once with free library selection and once with bans on risky APIs and safer replacements.
+
+    The resulting projects are analyzed with SAST and manual review.
+
+    Can a safer API surface turn a reckless bot into a security champion?
+  track: "Builder"
+  speakers:
+    - name: "Yariv Tal"
+      image: yariv-tal.jpg
+      position: "Secure Coding Mentor and Co-founder"
+      company: "Secure From Scratch"
+      bio: |-
+        Yariv Tal is a senior developer, security researcher, and cofounder of Secure From Scratch, a venture dedicated to teaching developers secure coding from the very first line of code.
+
+        A summa cum laude graduate of the Technion, Yariv brings four decades of programming experience and years of university lecturing and bootcamp mentoring to the field of application security.
+
+        He lectures on secure coding in academia and the private sector, leads the OWASP-untrust project, and researches the intersection of AI and application security, with a focus on secure code generation, LLM evaluation, and secure-by-construction development.
+
+        Yariv is currently pursuing a master’s degree in computer science.
 
 - day: "Saturday, November 21"
   time: "6:30pm–7:00pm"
   tz: "IST"
-  title: "Session 13"
+  title: "Beyond Copilot: AppSec Guardrails for AI-Generated Frontend Code"
+  outline: |-
+    AI coding assistants can help developers build user interfaces quickly, but the code they generate should not be treated as production-ready by default. A generated form, dashboard, or workflow may look correct in a demo while still creating security risks such as unsafe HTML rendering, missing validation, unnecessary dependencies, exposed configuration, or client-side trust assumptions.
+
+    This introductory talk explains how developers and AppSec teams can review AI-generated frontend code using simple, practical guardrails. The session will walk through common risk patterns, what to look for during review, and how teams can use approved components, basic static checks, dependency review, browser tests, and CI gates to catch problems earlier.
+
+    The goal is not to avoid AI coding tools. The goal is to use them safely by treating their output as a draft that still needs engineering review, automated checks, and clear security boundaries.
+
+    Attendees will leave with a beginner-friendly checklist they can use when reviewing AI-generated frontend code.
+  track: "Builder"
+  speakers:
+    - name: "Niharika P Pujari"
+      image: niharika-p-pujari.png
+      position: "Lead Software Engineer"
+      company: "McGraw Hill"
+      bio: |-
+        Niharika P. Pujari is a Lead Software Engineer with over eight years of experience building large-scale web applications in the higher-education technology domain. She specializes in frontend architecture using Angular and accessibility-first engineering, embedding inclusive design and automated quality checks directly into development workflows.
+
+        Her work focuses on practical adoption of generative AI within software teams, including introducing guardrails, review practices, and validation strategies that allow organizations to use AI-assisted development while maintaining reliability and user experience. She also works with cloud technologies supported by hands-on AWS experience and certifications.
 
 - day: "Sunday, November 22"
-  time: "11:00am–11:30am"
+  time: "11:00am–12:00pm"
   tz: "IST"
-  title: "Session 1"
-
-- day: "Sunday, November 22"
-  time: "11:30am–12:00pm"
-  tz: "IST"
-  title: "Session 2"
+  title: "Day 2 keynote (speaker to be announced)"
+  keynote: "Day 2 Keynote"
+  # Second keynote speaker to be announced. Add `speakers:` here (name, image, position, company, bio) when confirmed.
 
 - day: "Sunday, November 22"
   time: "12:00pm–12:30pm"
   tz: "IST"
-  title: "Session 3"
+  title: "AI Security Engineer Foundations: Enforcing Policy with AI-BOM"
+  outline: |-
+    AI Security Engineer Foundations: Enforcing Policy with AI-BOM
+
+    As AI systems move from experimentation into production, security teams face a new problem: they often don’t know which models, datasets, or AI services are actually being used in their software. This lack of visibility makes it nearly impossible to enforce policy, assess risk, or meet emerging regulatory requirements.
+
+    This talk introduces AI Bills of Materials (AI-BOMs) as a foundational tool for AI security engineering. Beyond inventory, AI-BOMs provide a practical enforcement layer—making AI usage observable, auditable, and governable. We’ll start with a concise overview of what an AI-BOM is, how it differs from SBOMs, and why it matters for security teams today.
+
+    The session then moves from theory to practice. Attendees will see a live command-line demonstration of generating and validating an AI-BOM, followed by a GitHub Actions workflow that automatically fails a build when an unapproved or unknown AI model is introduced into a project. The result is a concrete example of “policy as code” applied to AI systems.
+
+    By the end of this talk, security engineers and platform teams will understand how AI-BOMs can serve as a control plane for AI governance—and how to start enforcing AI security policies before incidents and audits force the issue.
+  track: "Builder"
+  speakers:
+    - name: "Micah Silverman"
+      image: micah-silverman.png
+      position: "Director, AI Acceleration"
+      company: "Snyk"
+      bio: |-
+        Micah is Snyk's Director of AI Acceleration. With 30 years of Java Experience (yup, that's from the beginning) and as a security professional Micah's authored numerous articles, co-authored a Java EE book, and spoken at many conferences. He's a maker, who's built full-size MAME arcade cabinets and repaired old electronic games (https://dogeared.dev/2011/10/16/weekend-project-fix-dark-tower/). He brings his love of all things security and Java to a conference near you!
 
 - day: "Sunday, November 22"
   time: "12:30pm–1:00pm"
   tz: "IST"
-  title: "Session 4"
+  title: "Building an AI Security Program"
+  outline: |-
+    Everyone wants AI. Few know how to secure it. This session discusses how modern AppSec teams can move beyond saying "No" and build an AI Security Program that enables innovation while managing emerging risks.
+  track: "Builder"
+  speakers:
+    - name: "Ved Prakash"
+      image: ved-prakash.png
+      position: "Application Security Specialist"
+      company: "Valtech"
+      bio: |-
+        I am an Application Security Specialist at Valtech with a background in software engineering and over eight years of experience in Java development. I works closely with engineering teams to integrate security into the software development lifecycle through secure coding, developer enablement, and modern AppSec practices.
+
+        My areas of interest include AI security, secure software development, DevSecOps, and helping organizations adopt AI securely without compromising innovation.
 
 - day: "Sunday, November 22"
   time: "1:00pm–1:30pm"
   tz: "IST"
-  title: "Session 5"
+  title: "Secure Governance for AI-Generated Code in Regulated Financial Systems"
+  outline: |-
+    Generative AI is rapidly changing software development by accelerating code generation, automated testing, code review, and operational workflows. While these capabilities improve developer productivity, they also introduce application security and governance risks that regulated financial institutions must address before AI-generated code can be trusted in production.
+
+    This session examines two security challenges that emerge in AI-assisted software delivery. The first is correlated failure, where AI-generated application code and AI-generated test cases inherit the same incorrect assumptions, allowing vulnerabilities and logic flaws to bypass validation. The second is AI hallucination, where generated code appears technically correct but violates secure coding practices, financial business rules, or regulatory requirements, creating security, compliance, and operational risks.
+
+    The session presents a practical governance framework aligned with the NIST AI Risk Management Framework (AI RMF 1.0), Basel Committee Operational Resilience Principles, and EBA ICT Risk Management Guidelines. Attendees will learn how to integrate human review, security validation, and risk-based approval into AI-assisted development pipelines without slowing software delivery. The framework evaluates software according to business impact and security risk rather than whether it was authored by a developer or generated by AI.
+
+    The session also explores how governance must evolve as AI systems begin generating patches, diagnosing production incidents, and orchestrating infrastructure, raising new questions around accountability, security oversight, and regulatory compliance.
+
+    Attendees will leave with practical guidance for implementing secure governance controls, strengthening AI-assisted SDLC practices, and adopting AI-generated code while maintaining application security, operational resilience, and regulatory compliance.
+  track: "Manager/Culture"
+  speakers:
+    - name: "Ashima Chakravarty"
+      image: ashima-chakravarty.png
+      position: "Engineering Team Director"
+      company: "BlackRock"
+      bio: |-
+        Ashima Chakravarty is an Engineering Director and Change Management Leader with over 15 years of experience in enterprise transformation, change governance, and large-scale platform operations within global financial services organizations. Based in Atlanta, GA, she has built a distinguished career leading cross-regional engineering, risk, and operations teams supporting highly regulated investment technology platforms used by institutional and retail market participants across multiple jurisdictions.
+        Currently serving as Global Head of Change Management at BlackRock, a role she has held since 2014, Ashima leads firm-wide enterprise change governance for infrastructure, software, and configuration changes across global technology environments. She is accountable for the change-risk posture of one of the world's largest asset-management platforms, ensuring operational resilience, production readiness, and regulatory compliance at scale. Under her leadership, BlackRock has sustained a 98%+ successful change-execution rate across 22,000 annual infrastructure changes.
+
+        Ashima's project portfolio reflects the breadth and impact of her work. She led change governance for the multi-year migration of the Aladdin platform to Microsoft Azure, serving approximately 130,000 users and over 200 institutional clients across 50+ countries, achieving a zero-disruption infrastructure transition. She also spearheaded operational governance for the BlackRock–Jio joint venture in India, the largest new Asset Management Company launch in the country's recent history, resulting in over $2 billion in assets raised within three days and zero disruption on launch day. Most recently, she has served as principal architect of a firm-wide initiative designed to eliminate technology incidents caused by changes across one of the world's largest financial-technology platforms
+        Beyond her project leadership, Ashima is recognized as a builder of scalable systems and high-performing teams. She conceived and built BlackRock's first Power BI–based Major Market Events and Enterprise-Wide Change Planner, a framework now adopted globally by over 10,000 users. She has been recognized through BlackRock's Technology Leadership Accelerator (TLX) program and the PROPEL advancement program, which honors the top 1% of leaders through senior executive sponsorship. She also led Atlanta's flagship Technology Engineering Summit, bringing together over 250 attendees and eight global technology partners.
+        Before BlackRock, Ashima worked at Publicis Sapient (formerly Sapient Consulting) as a Software Developer and Trading Platform Support Engineer, where she developed strong engineering fundamentals and expertise in operational resilience within high-reliability trading environments. She holds a Master of Computer Applications from the National Institute of Technology, Raipur, India, and a Bachelor of Science with Honours in Computer Science from the Institute for Excellence in Higher Education, India.
 
 - day: "Sunday, November 22"
   time: "1:30pm–2:00pm"
   tz: "IST"
-  title: "Session 6"
+  title: "Secure RAG Architecture for Financial Institutions: Provenance and Policy Enforcement"
+  outline: |-
+    Retrieval-Augmented Generation has become the dominant approach for deploying enterprise generative AI, enabling large language models to produce responses grounded in organizational knowledge without embedding sensitive data into model weights. In regulated financial environments, however, RAG pipelines introduce serious application security risks including sensitive information disclosure, entitlement bypass, provenance ambiguity, and inconsistent policy enforcement across ingestion, indexing, retrieval, and generation stages.
+    This session presents a Secure RAG reference architecture designed specifically for banking and financial institutions operating under strict compliance and data governance mandates. The framework addresses three foundational security objectives: preventing data leakage, ensuring verifiable provenance, and enabling enforceable policy controls throughout the AI lifecycle.
+    The architecture integrates identity- and attribute-aware retrieval mechanisms, policy-as-code enforcement using Attribute-Based Access Control, retrieval-scoped access filters, redaction gates for sensitive outputs, and immutable audit logging. To support audit defensibility, the framework introduces evidence bundles containing document identifiers, retrieval metadata, version history, timestamps, and policy decisions that can be produced on demand for compliance reviews.
+    The session also maps major threat categories relevant to financial AI systems, including prompt injection, retrieval compromise, sensitive output generation, and supply chain risks, and demonstrates how each can be mitigated through the proposed controls. Attendees will also walk away with a practical evaluation methodology covering leakage prevention rates, entitlement enforcement accuracy, provenance fidelity, refusal correctness, latency impact, and operational cost.
+  track: "Defender"
+  speakers:
+    - name: "Narendra Bhargav Boggarapu"
+      image: narendra-bhargav-boggarapu.jpg
+      position: "Lead Software Engineer"
+      company: "Wells Fargo"
+      bio: |-
+        Narendra Boggarapu is a Salesforce Technical Architect and Lead Software Engineer with over 14 years of experience in Salesforce development, enterprise integrations, and cloud-based CRM solutions. He has worked extensively on Salesforce implementations involving Sales Cloud, Experience Cloud, Lightning Web Components, Apex development, API integrations, and enterprise security solutions across banking, financial services, government, and technology sectors.
+        Narendra is currently working at Wells Fargo as a Lead Software Engineer, where he supports Salesforce and nCino-based loan origination applications for small business banking. His work includes developing Lightning Web Components, screen flows, Apex classes, Visualforce pages, and integrations with enterprise systems using REST and SOAP APIs, MuleSoft, Informatica ETL, and SSIS. He has also worked on security implementations involving Single Sign On, Okta MFA, Profiles, Permission Sets, Sharing Rules, and Shield Platform Encryption.
+        Previously, he worked on supplier onboarding and treasury management applications at Wells Fargo, where he contributed to the migration of Force.com Sites to Experience Cloud using the Lightning framework. He also worked on Salesforce integrations with Informatica ETL and internal enterprise systems while supporting CI/CD deployments using Jenkins, Git, SFDX, and AutoRABIT.
+        In the State of Ohio, Narendra contributed to the Ohio Business Gateway modernization project by developing Salesforce Community solutions, integrating enterprise identity management systems, and supporting tax payment processing workflows. He also worked on Apex development, batch processing, Visualforce pages, and Salesforce configurations for business process automation.
+        Earlier in his career, Narendra worked with organizations including American Express, Unigo Inc., and SYSGAIN Information Technologies, where he developed Salesforce applications, workflow automation solutions, reports, dashboards, approval processes, and custom CRM functionalities.
+        His technical expertise includes Salesforce Lightning Web Components, Apex, Visualforce, Batch Apex, Queueable Apex, REST and SOAP APIs, Salesforce security models, and CI/CD tools including Jenkins, Copado, ANT, AutoRABIT, Git, and SFDX.
+        Narendra holds a Master’s degree in Computer Science from Texas A&M University and a Bachelor of Technology in Information Technology from JNTUH.
 
 - day: "Sunday, November 22"
   time: "2:00pm–2:30pm"
   tz: "IST"
-  title: "Session 7"
+  title: "Secure Enterprise RAG Architectures: Building Trusted AI Knowledge Systems with Vector Search"
+  outline: |-
+    Generative AI is rapidly becoming part of enterprise applications, yet deploying Retrieval-Augmented Generation (RAG) securely remains a significant application security challenge. While vector databases and semantic retrieval improve knowledge discovery, they also introduce new attack surfaces, including prompt injection, data poisoning, retrieval manipulation, unauthorized information disclosure, and insecure AI pipelines. This presentation examines how to design secure enterprise RAG architectures that deliver trustworthy, context-aware responses while protecting sensitive organizational knowledge.
+
+    The session explores practical architectural patterns for securing vectorized knowledge systems using embedding isolation, hybrid retrieval validation, secure vector indexing, identity-aware access controls, encrypted storage, and policy-driven governance. It demonstrates how retrieval validation, grounding verification, provenance tracking, and human oversight reduce hallucinations and strengthen AI reliability within production environments. Additional topics include protecting enterprise data during ingestion, securing AI-assisted applications across the software development lifecycle, implementing zero-trust principles for AI services, and monitoring retrieval pipelines for anomalous behavior. The presentation also discusses emerging techniques including agentic RAG, graph-enhanced retrieval, and runtime security controls that improve reasoning while maintaining application security.
+
+    Attendees will leave with actionable architectural guidance for designing scalable, secure, and production-ready AI knowledge platforms that strengthen enterprise application security while enabling responsible adoption of generative AI.
+  track: "Builder"
+  speakers:
+    - name: "Ananda Kumar Dey"
+      image: ananda-kumar-dey.jpg
+      position: "Senior Solutions Director and Enterprise AI Architect"
+      company: "Quadrant Technologies LLC"
+      bio: |-
+        Ananda Kumar Dey is a Senior Solutions Director and Enterprise AI Architect with over 25 years of global experience leading enterprise-scale digital transformation, cloud modernization, and artificial intelligence initiatives. Throughout his career, he has delivered innovative technology solutions for Fortune 500 organizations and global enterprises, including Microsoft, HCL Technologies, Infosys, Wipro, Philips, Cardinal Health, and Sealed Air.
+        Currently leading the AI Practices function at Quadrant Technologies, Ananda has established enterprise AI governance frameworks, founded the QDojo AI Marketplace, and accelerated AI solution delivery through standardized architectures and reusable accelerators. His expertise spans Generative AI, Microsoft Fabric, Azure OpenAI, Azure Synapse, Databricks, Power BI, enterprise cloud transformation, and large-scale data modernization.
+        Over the course of his career, Ananda has led high-impact programs that optimized AI operations, streamlined enterprise processes, enabled zero-downtime cloud migrations, and supported Microsoft Teams telemetry platforms processing billions of events each day during periods of rapid global growth. He has successfully led large cross-functional teams while delivering scalable, secure, and business-driven technology solutions for complex enterprise environments.
+        A recognized technology leader, he has been invited as a Microsoft Guest Speaker on Generative AI and Advanced Language Models and has contributed thought leadership through industry publications on enterprise AI adoption and responsible AI practices. His work has also supported Microsoft Partner of the Year-winning initiatives while serving in Microsoft's elite FastTrack Business Intelligence program.
+        Ananda combines deep technical expertise with strategic leadership, consistently delivering scalable AI, cloud, and analytics solutions that drive innovation, operational excellence, and measurable business outcomes across global organizations.
 
 - day: "Sunday, November 22"
   time: "2:30pm–3:00pm"
@@ -140,42 +488,245 @@
 - day: "Sunday, November 22"
   time: "3:00pm–3:30pm"
   tz: "IST"
-  title: "Session 8"
+  title: "AI Metadata Security for Scalable Financial Crime Detection"
+  outline: |-
+    Financial crime detection increasingly depends on secure, trusted, and explainable data flows across web, cloud, API, and analytics platforms. Yet many institutions still struggle with fragmented metadata, inconsistent lineage, weak validation controls, and limited visibility into how sensitive data is classified, transformed, and consumed across detection systems. This session presents an application security–focused framework for using AI-powered metadata management to improve data quality, resilience, and governance in cross-border financial crime monitoring.
+
+    The talk will show how supervised learning, semantic classification, entity resolution, and API-first metadata services can be securely embedded into enterprise architectures to automate classification, enrichment, validation, and lineage tracking. It will also address key AppSec concerns, including privacy controls, secure API design, access governance, model explainability, adversarial testing, and auditability. Real-world implementation patterns demonstrate reductions in reconciliation effort, false positives, alert fatigue, and case resolution time while improving regulatory confidence.
+
+    Attendees will learn practical design patterns for building secure metadata pipelines, integrating AI safely into financial crime platforms, and applying OWASP-aligned principles to data-intensive compliance systems. The session is relevant for builders, defenders, architects, and security leaders working to secure AI-enabled financial applications at scale.
+  track: "Builder"
+  speakers:
+    - name: "Sonali Kothari"
+      image: sonali-kothari.jpg
+      position: "Technology Consulting Manager, FSO AI & Data"
+      company: "Ernst & Young"
+      bio: |-
+        Sonali Kothari is a dynamic and results-driven Remediation and Regulatory Data Strategy expert with over a decade of experience transforming enterprise data environments across global financial institutions. As a Technology Consulting Manager in FSO AI & Data at Ernst & Young (EY) in New York, she leads large-scale regulatory and compliance initiatives for Global Systemically Important Banks (GSIBs), with deep specialization in Anti-Money Laundering (AML), Basel III Risk Weighted Assets (RWA), CCAR, and FFIEC data quality frameworks.
+        Sonali is widely recognized for her ability to drive strategic innovation at the intersection of data management, regulatory intelligence, and advanced analytics. She has designed and executed high-impact solutions that integrate predictive modeling, automated anomaly detection, and AI-powered metadata governance, delivering measurable gains such as a 60% reduction in manual reconciliation, 20% improvement in reporting accuracy, and closure of high-risk Matter Requiring Immediate Attention (MRIA) findings for leading banks. Her methodologies have contributed to regulatory risk mitigation exceeding $10 billion in consolidated RWA impact.
+        With a proven track record of leading cross-functional global teams and delivering multi-million dollar programs, Sonali’s approach is marked by technical rigor, regulatory insight, and operational precision. She is proficient in a wide array of tools, including SQL, Python, Power BI, Tableau, SAP Analytics Cloud, and SAS, and excels at building robust data lineage frameworks, business rule engines, and performance KPIs for sustainable compliance and audit readiness.
+        Prior to EY, Sonali held leadership roles at Santander Bank, where she spearheaded the Credit Risk Data Warehouse (CRDWH) migration and led enterprise-wide remediation of systemic data quality issues, earning recognition for enabling a successful CCAR submission. She also brings experience from SEI Investments and Star Sports, where she managed financial automation, capital forecasting, and enterprise reporting transformations.
+        Academically, Sonali holds two master’s degrees—one in Information Systems Engineering & Management, and another in Computer Information Sciences, as well as a Postgraduate Diploma in Finance. Her scholarly work on AI in regulatory compliance, metadata management, and RegTech for financial inclusion has been published in peer-reviewed journals, and her leadership has been honored through multiple awards, including Bravo Awards, IEEE Senior Membership, and the TITAN Innovation Gold Award.
+        A passionate mentor and advocate for inclusive growth, Sonali dedicates time to career coaching for first-generation college students and leads financial literacy workshops for underserved communities. Her career exemplifies the fusion of analytics, compliance, and innovation, positioning her as a transformative force in today’s evolving financial landscape.
 
 - day: "Sunday, November 22"
   time: "3:30pm–4:00pm"
   tz: "IST"
-  title: "Session 9"
+  title: "Agentic AI for Self-Healing AppSec Operations in Financial Systems"
+  outline: |-
+    Financial application environments operate across complex APIs, microservices, cloud platforms, legacy systems, and regulated data flows, creating security and reliability challenges that exceed traditional monitoring capacity. This session presents an agentic AI framework for self-healing AppSec operations, designed to detect, reason about, and respond to threats and service degradation at machine speed while preserving human oversight and compliance. The architecture uses specialized agents for application telemetry, anomaly detection, vulnerability triage, incident response, access risk, configuration drift, and capacity protection. These agents collaborate to identify attack patterns, correlate security signals, prioritize alerts, and recommend or execute controlled remediation actions. For OWASP Defender, Ops, and Manager audiences, the talk demonstrates how graduated autonomy can support production security programs without removing accountability. Routine high-confidence events can trigger automated containment, while uncertain or high-risk scenarios escalate to human operators with evidence, reasoning chains, and audit trails. The framework also addresses explainability, policy enforcement, regulatory reporting, and integration with DevSecOps pipelines, SIEM, SOAR, and application security testing workflows. By reducing alert fatigue, improving response speed, and strengthening operational visibility, agentic AI enables financial institutions to build secure, resilient, and continuously defended application ecosystems
+  track: "Builder"
+  speakers:
+    - name: "Sudhindra Desai"
+      image: sudhindra-desai.jpg
+      position: "Senior Engineering Leader"
+      company: "Visa Inc"
+      bio: |-
+        Sudhindra Desai is a senior engineering leader and applied AI innovator with 18+ years of experience transforming how enterprises build, scale, and govern intelligent systems. He leads at the intersection of agentic AI, cloud-native data platforms, and organizational change, consistently turning emerging technology into measurable business outcomes across financial services, enterprise software, and industrial technology.
+        At Visa, Sudhindra leads an engineering organization spanning AI engineering, DevOps, and platform domains. He conceived and drove the enterprise adoption of an Agentic AI framework, a first-of-its-kind governance model at Visa, scaling autonomous agent delivery across 150+ teams and generating 300+ pull requests biweekly as engineering squads embedded agentic workflows into their core operating rhythm. Rather than building a centralized capability, he engineered a self-sustaining delivery engine: reusable scaffolding, governed agent registries, and monitoring infrastructure that gave every developer the tools to ship production-grade agents at sprint cadence. In parallel, he led the engineering delivery of Visa's Passkey initiative, bringing FIDO2/WebAuthn passwordless authentication backed by biometrics, PKI cryptography, and multi-region active-active replication to hundreds of millions of users across billions of transactions annually.
+        At PayPal, as Senior Staff Engineering Manager for AI and Data Platform, Sudhindra led checkout data engineering processing 1B+ daily data points across mobile, web, and marketing channels. He drove a significant reduction in ML model deployment time by institutionalizing MLOps practices across teams and delivered Bayesian attribution and segmentation models that directly improved marketing ROI and checkout conversion. His work shaped how PayPal's engineering organization approached AI, not as a research function but as a production discipline.
+        At Siemens, across two tenures, he built and led data and platform engineering teams through successive waves of modernization. As Technology Leader for Data Science and Data Engineering, he directed a 12-engineer team delivering cloud-native pipelines processing 100TB+ daily, drove $2M in annual cloud cost reduction through FinOps rigor, and introduced GenAI and LLM-powered systems that increased customer engagement by 40%. Earlier, as Software Development Lead, he led the team behind Teamcenter and Polarion PLM/ALM integrations, platform work that reshaped product lifecycle and software traceability practices across companies globally and delivered substantial engineering overhead reductions for enterprise clients.
+        His career also spans data engineering leadership at Rocket Mortgage, solution architecture at Ford Motor Company, and large-scale data consolidation at Geometric Global.
+        A published thought leader, Sudhindra has authored four peer-reviewed scholarly articles on agentic AI architecture, self-healing financial infrastructure, enterprise AI implementation frameworks, and multi-layered memory systems, alongside widely read writing on generative AI strategy, LLM fine-tuning, and resilient cloud design. He serves as a Technical Reviewer for IEEE CCWC, DECoN, and ICETCE, and holds memberships in IEEE, Sigma Xi, and Hackathon Raptors as a Fellow.
+        Sudhindra holds a Master of Science from the University of Michigan and a Bachelor of Engineering from Visweswaraiah Institute of Technology. He is an AWS Certified Solutions Architect, Terraform practitioner, Certified Databricks Data Engineer, and Certified ChatGPT Expert.
 
 - day: "Sunday, November 22"
   time: "4:00pm–4:30pm"
   tz: "IST"
-  title: "Session 10"
+  title: "SmartSAN AI: Securing Zero-Downtime Enterprise SAN Migrations with AI Automation"
+  outline: |-
+    Enterprise storage migrations remain one of the most operationally risky infrastructure transformations, frequently introducing security blind spots, configuration drift, unauthorized access paths, and service disruptions. In large multi-vendor environments, security teams often struggle to validate storage configurations, zoning policies, access controls, and compliance requirements while maintaining application availability. This session presents SmartSAN AI, an AI-driven framework designed to automate secure Storage Area Network (SAN) migrations with near-zero downtime. The platform combines machine learning–based risk prediction, automated compatibility validation, anomaly detection, and policy-driven provisioning to identify migration bottlenecks and security misconfigurations before cutover. Through large-scale enterprise implementations, SmartSAN AI achieved 93% prediction accuracy for migration risks, detected 97.3% of compatibility and configuration anomalies, and automated validation across hundreds of vendor-specific storage patterns. Attendees will learn how AI can be integrated into operational security workflows to continuously assess migration readiness, enforce least-privilege access models, validate zoning integrity, and reduce human error during critical infrastructure changes. The session will also demonstrate how automated rollback mechanisms, real-time monitoring, and ITSM integration help security and operations teams maintain compliance with ITIL, COBIT, and ISO 27001 requirements while reducing incident volumes and accelerating recovery. Practical lessons and implementation strategies will be shared for organizations pursuing secure, resilient, and non-disruptive infrastructure modernization.
+  track: "Builder"
+  speakers:
+    - name: "Mahipal Reddy Yalla"
+      image: mahipal-reddy-yalla.jpg
+      position: "Software Solutions Architect"
+      bio: |-
+        I specialize in enterprise IT infrastructure, AI-driven automation, and large-scale technology transformation. With over two decades of experience across infrastructure modernization, storage systems, and enterprise operations, I have led technology initiatives supporting global organizations across banking, telecom, healthcare, and enterprise services.
+
+        I am the Co-Founder of Virtual Networx Inc, where I focus on AI-driven infrastructure automation, enterprise transformation, and intelligent technology solutions. I conceived and led the development of SmartSAN-AI, an AI-based framework designed to support predictive automation and zero-downtime SAN storage migrations.
+
+        My professional background includes enterprise storage transformation, infrastructure delivery, cloud-integrated systems, and identity and access management. Earlier in my career, I contributed to large-scale SAN migration initiatives supporting enterprise banking environments during engagements with EMC and Bank of America.
+
+        I have authored publications focused on AI, cybersecurity, enterprise infrastructure, and automation technologies. I am also a member of the Forbes Technology Council and serve as AVP – Membership for the PMI Dallas Chapter.
+
+        My long-term focus is advancing intelligent enterprise infrastructure through AI, automation, and scalable technology innovation.
 
 - day: "Sunday, November 22"
   time: "4:30pm–5:00pm"
   tz: "IST"
-  title: "Session 11"
+  title: "Agentic Analytics: Trusted Human-AI Decision Intelligence at Scale"
+  outline: |-
+    Organizations increasingly rely on AI to accelerate operational decision-making, yet many struggle to balance speed, trust, governance, and human oversight. As operational data volumes grow across enterprise platforms, customer systems, and digital ecosystems, analytics teams face mounting challenges in extracting reliable insights while maintaining accountability for business decisions.
+
+    This presentation introduces agentic analytics, an emerging approach in which AI agents actively participate in analytical workflows by exploring datasets, identifying anomalies, generating summaries, and supporting decision intelligence under human supervision. Rather than replacing analysts, agentic systems augment human expertise by reducing manual effort associated with data extraction, exploratory analysis, reporting, and insight generation.
+
+    The session presents a practical framework for implementing agentic analytics through the integration of an enterprise data layer, analytics model layer, and AI agent layer. Attendees will learn how operational data is transformed into analytical outputs and decision-support narratives through structured human-AI collaboration.
+
+    A key focus of the discussion is the governance and risk considerations associated with AI-assisted analytics. The presentation examines validation of AI-generated insights, transparency of analytical reasoning, data governance requirements, and the operational risks of automation bias. It also explores how organizations can establish guardrails that preserve human accountability while benefiting from AI-driven analytical efficiency.
+
+    Attendees will leave with a clear understanding of the architectural components, governance practices, and implementation considerations required to deploy agentic analytics responsibly. The session is intended for security leaders, architects, operations teams, and technology practitioners seeking practical approaches for leveraging AI agents to improve decision intelligence while maintaining trust, oversight, and organizational control.
+  track: "Manager/Culture"
+  speakers:
+    - name: "Sushen Sarkar"
+      image: sushen-sarkar.jpg
+      position: "Data Analytics and Technology Leader"
+      company: "University of Chicago - Booth School of Business"
+      bio: |-
+        Sushen Sarkar is a seasoned data analytics and technology leader with extensive experience driving data-informed decision-making across large-scale, customer-focused and operational environments. Currently serving as a Manager of Data Analytics, he specializes in transforming complex business challenges into actionable insights through exploratory analysis, data visualization, and strategic storytelling. His work is centered on enhancing customer experience, improving operational efficiency, and strengthening data governance across enterprise systems.
+        Throughout his career, Sushen has demonstrated a strong ability to bridge the gap between business strategy and technical execution. He has led analytics initiatives supporting contact operations and store performance, translating business objectives into measurable insights and executive-level narratives. His expertise spans metrics design, data quality improvement, and the development of intuitive dashboards that enable organizations to make informed, timely decisions. He is also known for resolving complex data discrepancies and establishing robust validation frameworks that enhance reporting accuracy and trust.
+        In addition to his analytics leadership, Sushen brings deep experience in product development and engineering transformation. He has played a pivotal role in modernizing logistics and operational platforms, guiding transitions toward scalable architectures and user-centric solutions. His leadership has supported cross-functional collaboration across engineering, product, and operations teams, fostering innovation while improving workflows and system performance. He has also contributed to automation initiatives that streamline processes and enable more efficient resource utilization.
+        Sushen’s professional journey reflects a consistent focus on building high-performing teams and nurturing talent. He is recognized for his collaborative leadership style, commitment to operational excellence, and ability to drive meaningful organizational change. Complementing his industry experience, he holds an advanced business degree, further strengthening his strategic perspective and ability to align analytics with broader business goals.
 
 - day: "Sunday, November 22"
   time: "5:00pm–5:30pm"
   tz: "IST"
-  title: "Session 12"
+  title: "Stop Building AI Demos: How to Ship LLM Features People Actually Trust"
+  outline: |-
+    LLM demos are easy. Production AI is where things get weird.
+
+    In this talk, I’ll walk through what actually changes when you move from a clever prototype to an AI feature real people depend on: messy prompts, unclear user intent, unreliable outputs, security constraints, evaluation gaps, and the painful moment when demo accuracy collapses in the wild.
+
+    Using real-world lessons from building internal AI assistants, natural-language data tools, and enterprise AI workflows, we’ll cover how developers can design AI systems that are useful, testable, and trusted. We’ll look at practical patterns for scoping use cases, setting confidence boundaries, keeping humans in the loop, and measuring whether the AI is actually helping.
+
+    Attendees will leave with a simple framework for deciding when an LLM belongs in a workflow, when it doesn’t, and how to avoid shipping an impressive toy that nobody trusts.
+  track: "Manager/Culture"
+  speakers:
+    - name: "Vin Mitty, PhD"
+      image: vin-mitty-phd.png
+      position: "Sr. Director of Data Science & AI"
+      company: "LegalShield (PPLSI)"
+      bio: |-
+        Vin Mitty is a data and AI leader with a PhD in the field, researcher, and author of the book, The AI Decision Map.
+
+        Drawing from 2 decades of technology leadership, PhD research, and executive interviews on his podcast, Mitty helps organizations and leaders transform AI into measurable business outcomes.
 
 - day: "Sunday, November 22"
   time: "5:30pm–6:00pm"
   tz: "IST"
-  title: "Session 13"
+  title: "Stop Repeating Yourself: Building a Pooled Audit Program That Regulators and Customers Both Trust"
+  outline: |-
+    Financial services customers operating under DORA, APRA CPS 230 and 234, and NYDFS 500 are required to audit their critical outsourced technology providers. For years the only answer was a one-to-one model: each customer scheduling a separate engagement, reviewing the same controls, asking many of the same questions. The resource drain compounds on both sides.
+
+    This session walks through what it takes to build a pooled audit program: one structured multi-day session, multiple regulated customers assessing the same control environment simultaneously. We cover how to get regulators to accept it, what control domains matter most across different frameworks, how peer-to-peer customer learning emerges as an unplanned benefit, and what separates a program that satisfies a regulator from one that merely informs them.The audience leaves with a replicable framework for designing, piloting, and scaling a pooled audit model, grounded in hard-learned lessons from practitioners who have run this across multiple regulatory regimes and customer bases.
+
+    No vendor pitch. Practitioner-tested.
+  track: "Manager/Culture"
+  speakers:
+    - name: "Tushar Badlani"
+      image: tushar-badlani.jpg
+      position: "Security Specialist"
+      company: "Figma"
+      bio: |-
+        Tushar Badlani is a Security Specialist at Figma, focused on scaling Customer Trust and Third-Party Risk Management programs. With 10+ years of experience building and scaling security programs across vendor assurance, customer assurance, customer trust, and security compliance, he specializes in building risk-first assurance frameworks that grow with the business.
+
+        His career spans consulting at EY and TCS, where he developed a cross-industry foundation in GRC, IT audit, and compliance, and most recently 6.5 years at Okta, first as Customer Assurance NAM Manager overseeing customer assurance across North America, and then as Global Customer Audit Manager leading the company's global customer audit program across AMER, EMEA, and APJ.
+
+        As a strategic Advisor at Drata, Tushar advises the leadership team on GRC, assurance, and compliance program design. He has also served on Customer Advisory Boards and Product Advisory Boards, bringing a practitioner's lens to product strategy that reflects real-world security and compliance needs.
+        He is passionate about operationalizing security at scale, leveraging automation, framework harmonization, and cross-functional collaboration to make trust a competitive advantage.
 
 - day: "Sunday, November 22"
   time: "6:00pm–6:30pm"
   tz: "IST"
-  title: "Session 14"
+  title: "HCMM ¦ Beyond Compliance: Why Most Cybersecurity Programs Still Fail in the Real World"
+  outline: |-
+    Organizations today are overwhelmed by cybersecurity frameworks, audits, scorecards, compliance requirements, and vendor promises — yet many still struggle to answer fundamental operational questions:
+
+    - Where are we actually vulnerable?
+    - Which weaknesses matter most?
+    - What should we improve first?
+    - How do we measure real progress?
+    - And how resilient are we beyond compliance checklists?
+
+    Frameworks such as ISO 27001, NIST CSF, CIS Controls, Zero Trust architectures, and various maturity assessments provide valuable guidance. However, in real-world environments, many organizations still face a dangerous gap between documented compliance and actual operational cyber resilience.
+
+    This session introduces the Helvetic Cybersecurity Maturity Model (HCMM), a practical and structured approach designed to help organizations assess, visualize, prioritize, and improve cybersecurity maturity in a measurable and operationally meaningful way.
+
+    Rather than introducing “yet another framework,” this talk focuses on the real-world challenges many organizations face today:
+
+    - security programs driven by compliance instead of resilience
+    - fragmented tooling without strategic visibility
+    - unclear prioritization of investments
+    - leadership blind spots
+    - and the growing disconnect between technical controls and business risk
+
+    The session explores how maturity-based approaches can help organizations:
+
+    - identify operational weaknesses
+    - improve governance visibility
+    - prioritize security initiatives
+    - align cybersecurity with business objectives
+    - and build realistic improvement roadmaps instead of checkbox-driven activities
+
+    Attendees will gain practical insights into:
+
+    - where traditional cybersecurity maturity initiatives often fail
+    - why compliance alone is not enough
+    - how organizations can evaluate cyber resilience more realistically
+    - and how structured maturity models can support better operational and strategic decision-making
+
+    The presentation includes practical examples, governance considerations, operational perspectives, and lessons learned from complex transformation and cybersecurity environments.
+
+    Participants will leave with:
+
+    - a clearer understanding of the gap between compliance and resilience
+    - practical ideas for evaluating cybersecurity maturity
+    - approaches for prioritizing security improvements
+    - and actionable concepts for building measurable cyber resilience programs
+  track: "Manager/Culture"
+  speakers:
+    - name: "Dr. S. Isele"
+      image: dr-s-isele.png
+      position: "President and Agilist"
+      company: "HelveticMinds - SwissShore LLC"
+      bio: |-
+        Dr. Siegfried Isele is a Managing Director, senior transformation executive, and board-level
+        advisor with more than 25 years of international leadership experience across insurance,
+        financial services, government, logistics, retail, and technology.
+
+        He specializes in large-scale modernization and transformation programs, including legacy
+        system replacement, data migration, AI-enabled automation, and regulated platform
+        transformation. Dr. Isele has led initiatives involving hundreds of specialists across multiple
+        continents, operating in highly regulated environments where reliability, compliance, and
+        governance are mission-critical.
+
+        In addition to his executive delivery leadership, he serves as a Senior Security Auditor (ISO/IEC
+        27001 & OT Security) and trusted advisor on cybersecurity, operational risk, and regulatory
+        compliance. His board and advisory contributions focus on technology strategy,
+        transformation governance, risk oversight, and executive decision-making.
+
+        Dr. Isele is known for his pragmatic application of agile principles, bridging structured
+        governance with real-world execution. He holds advanced degrees in economics, law, and
+        business engineering and has completed executive education at Harvard University, MIT,
+        Columbia Business School, UC Berkeley, and IIM Bangalore.
+
+        He is authorized to work in all Europe (incl. D A CH), the United States, and the United Arab Emirates, as well as he operates internationally.
 
 - day: "Sunday, November 22"
   time: "6:30pm–7:00pm"
   tz: "IST"
-  title: "Session 15"
+  title: "Beyond Security Awareness: Building Teams Ready to Speak Up"
+  outline: |-
+    Application security programs often fail at the point where technical guidance must become human action. Developers may notice risks but hesitate to raise them, security teams may struggle to communicate business impact, and leaders may unintentionally create conditions where concerns surface too late.
+
+    This session introduces Human Readiness as the organizational capacity to question assumptions, communicate risk, escalate concerns, and collaborate across security, engineering, and leadership teams. Attendees will examine how voice, trust, self-belief, and visibility influence secure-by-design adoption and AppSec culture.
+
+    Using realistic workplace scenarios, participants will learn how to identify silence points within the software development lifecycle, improve conversations about risk and trade-offs, and create practical opportunities for security concerns to be raised earlier.
+
+    Security awareness tells people what to notice. Human Readiness determines whether they are prepared and supported to act on it.
+
+    Learning Objectives
+
+    1. Identify communication and culture gaps that prevent AppSec concerns from being raised, understood, or escalated.
+    2. Apply a practical visibility framework to improve risk conversations between security, engineering, and leadership teams.
+    3. Design one team practice that supports earlier escalation, stronger collaboration, and secure-by-design decision-making.
+  track: "Manager/Culture"
+  speakers:
+    - name: "Sheena Yap Chan"
+      image: sheena-yap-chan.jpg
+      position: "Keynote Speaker and Wall Street Journal Bestselling Author"
+      bio: |-
+        Sheena Yap Chan is a Wall Street Journal bestselling author, keynote speaker, strategist, and award-winning podcaster renowned for her expertise in elevating leadership and self-confidence through media. She is the founder and host of the acclaimed podcast, The Tao of Self-Confidence, where she interviews women about their journeys to self-confidence. With over one million downloads, her podcast ranks among the top 0.5% most popular shows globally and features over 800 interviews, including conversations with celebrities and eight-figure CEOs. Sheena's influence extends beyond podcasting. Her debut book, The Tao of Self-Confidence: A Guide to Moving Beyond Trauma and Awakening the Leader Within, published by Wiley, is a Wall Street Journal and Publishers Weekly bestseller. It is also recognized as one of the top 20 best self-confidence books of all time by Book Authority, the world's leading site for book recommendations. Her work has been featured on prominent platforms such as MindValley, FOX, NBC News, and the Manila Times. Sheena is dedicated to closing the gender confidence gap through her training and programs, aiming to elevate women into leadership roles across all industries. She has delivered impactful speeches for organizations like Live Nation, NASA, and UKG, sharing her insights on self-confidence and leadership.
 
 - day: "Sunday, November 22"
   time: "7:00pm–7:15pm"
@@ -186,3 +737,20 @@
       image: vandana-verma-sehgal.jpg
       position: "Security Leader"
       company: "Snyk"
+
+# ---------------------------------------------------------------------------
+# Accepted but NOT yet scheduled (no free slot left after adding the Day 2 keynote).
+# Uncomment and set `day:`/`time:` to place it, or swap with a scheduled session.
+# ---------------------------------------------------------------------------
+# - day: "TBD"
+#   time: "TBD"
+#   tz: "IST"
+#   title: "Fleet Intelligent Platform: Turning Geotab data into an AI Driven Fleet Platform"
+#   track: "Builder"
+#   speakers:
+#     - name: "Anudeep Katangoori"
+#       image: anudeep-katangoori.jpg
+#       position: "Data Platform Architect"
+#       company: "Swift Transportation"
+#       bio: |-
+#         Anudeep Katangoori is a data platform architect at Swift Transportation with more than 15 years of expertise in developing, architecting, and deploying enterprise-level big data, AI, and cloud solutions across transportation, retail, healthcare, finance, e-commerce, and telecom sectors. Anudeep holds a bachelor’s degree in computer science and engineering from JNTU, India, and a master’s degree in computer science from the University of North Carolina at Greensboro (UNCG). He is currently pursuing an Executive MBA from the Fuqua School of Business at Duke University. An IEEE Senior Member, Anudeep holds certifications in Google Cloud Professional Cloud Architect, Microsoft Azure Solutions Architect, Microsoft Azure DevOps, and PMP.
