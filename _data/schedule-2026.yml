@@ -282,14 +282,10 @@
         Alongside his industry experience, Siddharth is actively involved in AI research. His research interests include AI security, adversarial machine learning, trustworthy AI, and biomedical AI. He has conducted research on deep learning models for neurodegenerative disease detection using EEG signals and is currently authoring a taxonomy of Voice AI Red Teaming that systematically classifies attack vectors, evaluation methodologies, and security challenges in next-generation conversational AI systems.
 
         Beyond research, Siddharth actively participates in cybersecurity competitions, hackathons, and technical communities, contributing to discussions and practical evaluations of AI system security. His work combines hands-on offensive security testing with academic research to improve the reliability and resilience of modern AI applications.
-    - name: "Yuvaraj Govindarajulu"
-      image: yuvaraj-govindarajulu.jpg
-      position: "AVP - Product Engineering, Head of Research"
+    - name: "Deepkumar Wagh"
+      image: deepkumar-wagh.jpg
+      position: "Assistant Manager, Product Engineering – AI Security"
       company: "Protectt.ai"
-      bio: |-
-        Yuvaraj Govindarajulu is a technical leader with over a decade of experience in AI, Cybersecurity and Embedded Systems R&D. He is the AVP - Product Engineering & Head of Research at Protectt.ai. He is the co-lead of the OWASP AI Bill of Materials Project and the Co-Author, Workstream lead (Harmonization) at the OWASP AI Exchange. With over 22+ International patents filed, his key areas of focus include AI Red Teaming, GenAI Guardrails, Ransomware Attacks on AI Systems and AI supply chain Security.
-
-        Yuvaraj is a co-author and a key contributor to the AI Security Testing section, GenAI Red Teaming Guide, Agentic AI Red Teaming Guide. Previously, Yuvaraj was an active member of standard bodies shaping global AI security, including ETSI and ISO. His previous talks and publications include presentations at prominent conferences such as OWASP AppSec EU, BSI IT Security congress, NeurIPS, DEFCON and IEEE SecDev. Yuvaraj also served as the technical lead for the EU Horizon Project "COBALT", with focus on continuous AI certification. With a proven track record of innovation, he has developed novel solutions that have translated into products and impactful industry contributions.
 
 - day: "Saturday, November 21"
   time: "5:30pm–6:00pm"
@@ -513,23 +509,13 @@
 - day: "Sunday, November 22"
   time: "3:30pm–4:00pm"
   tz: "IST"
-  title: "Agentic AI for Self-Healing AppSec Operations in Financial Systems"
-  outline: |-
-    Financial application environments operate across complex APIs, microservices, cloud platforms, legacy systems, and regulated data flows, creating security and reliability challenges that exceed traditional monitoring capacity. This session presents an agentic AI framework for self-healing AppSec operations, designed to detect, reason about, and respond to threats and service degradation at machine speed while preserving human oversight and compliance. The architecture uses specialized agents for application telemetry, anomaly detection, vulnerability triage, incident response, access risk, configuration drift, and capacity protection. These agents collaborate to identify attack patterns, correlate security signals, prioritize alerts, and recommend or execute controlled remediation actions. For OWASP Defender, Ops, and Manager audiences, the talk demonstrates how graduated autonomy can support production security programs without removing accountability. Routine high-confidence events can trigger automated containment, while uncertain or high-risk scenarios escalate to human operators with evidence, reasoning chains, and audit trails. The framework also addresses explainability, policy enforcement, regulatory reporting, and integration with DevSecOps pipelines, SIEM, SOAR, and application security testing workflows. By reducing alert fatigue, improving response speed, and strengthening operational visibility, agentic AI enables financial institutions to build secure, resilient, and continuously defended application ecosystems
+  title: "Securing Kubernetes at Scale: Building Resilient Cloud Native Infrastructure Against Modern Threats"
   track: "Builder"
   speakers:
-    - name: "Sudhindra Desai"
-      image: sudhindra-desai.jpg
-      position: "Senior Engineering Leader"
-      company: "Visa Inc"
-      bio: |-
-        Sudhindra Desai is a senior engineering leader and applied AI innovator with 18+ years of experience transforming how enterprises build, scale, and govern intelligent systems. He leads at the intersection of agentic AI, cloud-native data platforms, and organizational change, consistently turning emerging technology into measurable business outcomes across financial services, enterprise software, and industrial technology.
-        At Visa, Sudhindra leads an engineering organization spanning AI engineering, DevOps, and platform domains. He conceived and drove the enterprise adoption of an Agentic AI framework, a first-of-its-kind governance model at Visa, scaling autonomous agent delivery across 150+ teams and generating 300+ pull requests biweekly as engineering squads embedded agentic workflows into their core operating rhythm. Rather than building a centralized capability, he engineered a self-sustaining delivery engine: reusable scaffolding, governed agent registries, and monitoring infrastructure that gave every developer the tools to ship production-grade agents at sprint cadence. In parallel, he led the engineering delivery of Visa's Passkey initiative, bringing FIDO2/WebAuthn passwordless authentication backed by biometrics, PKI cryptography, and multi-region active-active replication to hundreds of millions of users across billions of transactions annually.
-        At PayPal, as Senior Staff Engineering Manager for AI and Data Platform, Sudhindra led checkout data engineering processing 1B+ daily data points across mobile, web, and marketing channels. He drove a significant reduction in ML model deployment time by institutionalizing MLOps practices across teams and delivered Bayesian attribution and segmentation models that directly improved marketing ROI and checkout conversion. His work shaped how PayPal's engineering organization approached AI, not as a research function but as a production discipline.
-        At Siemens, across two tenures, he built and led data and platform engineering teams through successive waves of modernization. As Technology Leader for Data Science and Data Engineering, he directed a 12-engineer team delivering cloud-native pipelines processing 100TB+ daily, drove $2M in annual cloud cost reduction through FinOps rigor, and introduced GenAI and LLM-powered systems that increased customer engagement by 40%. Earlier, as Software Development Lead, he led the team behind Teamcenter and Polarion PLM/ALM integrations, platform work that reshaped product lifecycle and software traceability practices across companies globally and delivered substantial engineering overhead reductions for enterprise clients.
-        His career also spans data engineering leadership at Rocket Mortgage, solution architecture at Ford Motor Company, and large-scale data consolidation at Geometric Global.
-        A published thought leader, Sudhindra has authored four peer-reviewed scholarly articles on agentic AI architecture, self-healing financial infrastructure, enterprise AI implementation frameworks, and multi-layered memory systems, alongside widely read writing on generative AI strategy, LLM fine-tuning, and resilient cloud design. He serves as a Technical Reviewer for IEEE CCWC, DECoN, and ICETCE, and holds memberships in IEEE, Sigma Xi, and Hackathon Raptors as a Fellow.
-        Sudhindra holds a Master of Science from the University of Michigan and a Bachelor of Engineering from Visweswaraiah Institute of Technology. He is an AWS Certified Solutions Architect, Terraform practitioner, Certified Databricks Data Engineer, and Certified ChatGPT Expert.
+    - name: "Manpreet Singh Sachdeva"
+      image: manpreet-singh-sachdeva.jpg
+      position: "Staff Software Engineer"
+      company: "Walmart Global Tech"
 
 - day: "Sunday, November 22"
   time: "4:00pm–4:30pm"
