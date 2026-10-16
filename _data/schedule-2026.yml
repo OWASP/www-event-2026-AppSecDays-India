@@ -81,8 +81,8 @@
   speakers:
     - name: "Clint Josy"
       image: clint-josy.png
-      position: "Offensive Security Leader"
-      company: "Cyderes"
+      position: "AI Security Researcher"
+      company: "SAFE Security"
       bio: |-
         Clint Josy
         A cyber security leader focused on building AI-driven security solutions, grounded in offensive security and exposure management. Clint researches and leads adversary-style engagements at the intersection of AI and cloud identity, notably exposing an Azure AD/Entra Conditional Access bypass that escalated to Global Administrator from a single blocked credential without malware or a corporate endpoint. He publishes on AI‑driven attack surfaces, cloud identity abuse (PRT/device registration/Intune), and protocol-level vulnerabilities, and builds tools that apply ML insights to real-world red teaming.
