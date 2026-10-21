@@ -677,32 +677,6 @@
 - day: "Sunday, November 22"
   time: "6:30pm–7:00pm"
   tz: "IST"
-  title: "Beyond Security Awareness: Building Teams Ready to Speak Up"
-  outline: |-
-    Application security programs often fail at the point where technical guidance must become human action. Developers may notice risks but hesitate to raise them, security teams may struggle to communicate business impact, and leaders may unintentionally create conditions where concerns surface too late.
-
-    This session introduces Human Readiness as the organizational capacity to question assumptions, communicate risk, escalate concerns, and collaborate across security, engineering, and leadership teams. Attendees will examine how voice, trust, self-belief, and visibility influence secure-by-design adoption and AppSec culture.
-
-    Using realistic workplace scenarios, participants will learn how to identify silence points within the software development lifecycle, improve conversations about risk and trade-offs, and create practical opportunities for security concerns to be raised earlier.
-
-    Security awareness tells people what to notice. Human Readiness determines whether they are prepared and supported to act on it.
-
-    Learning Objectives
-
-    1. Identify communication and culture gaps that prevent AppSec concerns from being raised, understood, or escalated.
-    2. Apply a practical visibility framework to improve risk conversations between security, engineering, and leadership teams.
-    3. Design one team practice that supports earlier escalation, stronger collaboration, and secure-by-design decision-making.
-  track: "Manager/Culture"
-  speakers:
-    - name: "Sheena Yap Chan"
-      image: sheena-yap-chan.jpg
-      position: "Keynote Speaker and Wall Street Journal Bestselling Author"
-      bio: |-
-        Sheena Yap Chan is a Wall Street Journal bestselling author, keynote speaker, strategist, and award-winning podcaster renowned for her expertise in elevating leadership and self-confidence through media. She is the founder and host of the acclaimed podcast, The Tao of Self-Confidence, where she interviews women about their journeys to self-confidence. With over one million downloads, her podcast ranks among the top 0.5% most popular shows globally and features over 800 interviews, including conversations with celebrities and eight-figure CEOs. Sheena's influence extends beyond podcasting. Her debut book, The Tao of Self-Confidence: A Guide to Moving Beyond Trauma and Awakening the Leader Within, published by Wiley, is a Wall Street Journal and Publishers Weekly bestseller. It is also recognized as one of the top 20 best self-confidence books of all time by Book Authority, the world's leading site for book recommendations. Her work has been featured on prominent platforms such as MindValley, FOX, NBC News, and the Manila Times. Sheena is dedicated to closing the gender confidence gap through her training and programs, aiming to elevate women into leadership roles across all industries. She has delivered impactful speeches for organizations like Live Nation, NASA, and UKG, sharing her insights on self-confidence and leadership.
-
-- day: "Sunday, November 22"
-  time: "7:00pm–7:15pm"
-  tz: "IST"
   title: "Conference closing remarks"
   speakers:
     - name: "Vandana Verma Sehgal"
