@@ -485,26 +485,11 @@
 - day: "Sunday, November 22"
   time: "3:00pm–3:30pm"
   tz: "IST"
-  title: "AI Metadata Security for Scalable Financial Crime Detection"
-  outline: |-
-    Financial crime detection increasingly depends on secure, trusted, and explainable data flows across web, cloud, API, and analytics platforms. Yet many institutions still struggle with fragmented metadata, inconsistent lineage, weak validation controls, and limited visibility into how sensitive data is classified, transformed, and consumed across detection systems. This session presents an application security–focused framework for using AI-powered metadata management to improve data quality, resilience, and governance in cross-border financial crime monitoring.
-
-    The talk will show how supervised learning, semantic classification, entity resolution, and API-first metadata services can be securely embedded into enterprise architectures to automate classification, enrichment, validation, and lineage tracking. It will also address key AppSec concerns, including privacy controls, secure API design, access governance, model explainability, adversarial testing, and auditability. Real-world implementation patterns demonstrate reductions in reconciliation effort, false positives, alert fatigue, and case resolution time while improving regulatory confidence.
-
-    Attendees will learn practical design patterns for building secure metadata pipelines, integrating AI safely into financial crime platforms, and applying OWASP-aligned principles to data-intensive compliance systems. The session is relevant for builders, defenders, architects, and security leaders working to secure AI-enabled financial applications at scale.
-  track: "Builder"
+  title: "What It Takes to Write a Security Book"
+  track: "Manager/Culture"
   speakers:
-    - name: "Sonali Kothari"
-      image: sonali-kothari.jpg
-      position: "Technology Consulting Manager, FSO AI & Data"
-      company: "Ernst & Young"
-      bio: |-
-        Sonali Kothari is a dynamic and results-driven Remediation and Regulatory Data Strategy expert with over a decade of experience transforming enterprise data environments across global financial institutions. As a Technology Consulting Manager in FSO AI & Data at Ernst & Young (EY) in New York, she leads large-scale regulatory and compliance initiatives for Global Systemically Important Banks (GSIBs), with deep specialization in Anti-Money Laundering (AML), Basel III Risk Weighted Assets (RWA), CCAR, and FFIEC data quality frameworks.
-        Sonali is widely recognized for her ability to drive strategic innovation at the intersection of data management, regulatory intelligence, and advanced analytics. She has designed and executed high-impact solutions that integrate predictive modeling, automated anomaly detection, and AI-powered metadata governance, delivering measurable gains such as a 60% reduction in manual reconciliation, 20% improvement in reporting accuracy, and closure of high-risk Matter Requiring Immediate Attention (MRIA) findings for leading banks. Her methodologies have contributed to regulatory risk mitigation exceeding $10 billion in consolidated RWA impact.
-        With a proven track record of leading cross-functional global teams and delivering multi-million dollar programs, Sonali’s approach is marked by technical rigor, regulatory insight, and operational precision. She is proficient in a wide array of tools, including SQL, Python, Power BI, Tableau, SAP Analytics Cloud, and SAS, and excels at building robust data lineage frameworks, business rule engines, and performance KPIs for sustainable compliance and audit readiness.
-        Prior to EY, Sonali held leadership roles at Santander Bank, where she spearheaded the Credit Risk Data Warehouse (CRDWH) migration and led enterprise-wide remediation of systemic data quality issues, earning recognition for enabling a successful CCAR submission. She also brings experience from SEI Investments and Star Sports, where she managed financial automation, capital forecasting, and enterprise reporting transformations.
-        Academically, Sonali holds two master’s degrees—one in Information Systems Engineering & Management, and another in Computer Information Sciences, as well as a Postgraduate Diploma in Finance. Her scholarly work on AI in regulatory compliance, metadata management, and RegTech for financial inclusion has been published in peer-reviewed journals, and her leadership has been honored through multiple awards, including Bravo Awards, IEEE Senior Membership, and the TITAN Innovation Gold Award.
-        A passionate mentor and advocate for inclusive growth, Sonali dedicates time to career coaching for first-generation college students and leads financial literacy workshops for underserved communities. Her career exemplifies the fusion of analytics, compliance, and innovation, positioning her as a transformative force in today’s evolving financial landscape.
+    - name: "Rahul Nair"
+      company: "Packt"
 
 - day: "Sunday, November 22"
   time: "3:30pm–4:00pm"
