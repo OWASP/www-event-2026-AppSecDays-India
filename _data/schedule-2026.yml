@@ -489,6 +489,7 @@
   track: "Manager/Culture"
   speakers:
     - name: "Rahul Nair"
+      image: rahul-nair.jpg
       company: "Packt"
 
 - day: "Sunday, November 22"
