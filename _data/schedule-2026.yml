@@ -367,7 +367,8 @@
 - day: "Sunday, November 22"
   time: "12:00pm–12:30pm"
   tz: "IST"
-  # Open slot. Add title and `speakers:` when confirmed.
+  title: "To be announced"
+  # Open slot. Add `speakers:` here (name, image, position, company, bio) when confirmed.
 
 - day: "Sunday, November 22"
   time: "12:30pm–1:00pm"
