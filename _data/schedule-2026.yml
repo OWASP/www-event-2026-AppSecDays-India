@@ -337,25 +337,8 @@
 - day: "Saturday, November 21"
   time: "6:30pm–7:00pm"
   tz: "IST"
-  title: "Beyond Copilot: AppSec Guardrails for AI-Generated Frontend Code"
-  outline: |-
-    AI coding assistants can help developers build user interfaces quickly, but the code they generate should not be treated as production-ready by default. A generated form, dashboard, or workflow may look correct in a demo while still creating security risks such as unsafe HTML rendering, missing validation, unnecessary dependencies, exposed configuration, or client-side trust assumptions.
-
-    This introductory talk explains how developers and AppSec teams can review AI-generated frontend code using simple, practical guardrails. The session will walk through common risk patterns, what to look for during review, and how teams can use approved components, basic static checks, dependency review, browser tests, and CI gates to catch problems earlier.
-
-    The goal is not to avoid AI coding tools. The goal is to use them safely by treating their output as a draft that still needs engineering review, automated checks, and clear security boundaries.
-
-    Attendees will leave with a beginner-friendly checklist they can use when reviewing AI-generated frontend code.
-  track: "Builder"
-  speakers:
-    - name: "Niharika P Pujari"
-      image: niharika-p-pujari.png
-      position: "Lead Software Engineer"
-      company: "McGraw Hill"
-      bio: |-
-        Niharika P. Pujari is a Lead Software Engineer with over eight years of experience building large-scale web applications in the higher-education technology domain. She specializes in frontend architecture using Angular and accessibility-first engineering, embedding inclusive design and automated quality checks directly into development workflows.
-
-        Her work focuses on practical adoption of generative AI within software teams, including introducing guardrails, review practices, and validation strategies that allow organizations to use AI-assisted development while maintaining reliability and user experience. She also works with cloud technologies supported by hands-on AWS experience and certifications.
+  title: "To be announced"
+  # Open slot. Add `speakers:` here (name, image, position, company, bio) when confirmed.
 
 - day: "Sunday, November 22"
   time: "11:00am–12:00pm"
@@ -418,8 +401,25 @@
 - day: "Sunday, November 22"
   time: "1:30pm–2:00pm"
   tz: "IST"
-  title: "To be announced"
-  # Open slot. Add `speakers:` here (name, image, position, company, bio) when confirmed.
+  title: "Beyond Copilot: AppSec Guardrails for AI-Generated Frontend Code"
+  outline: |-
+    AI coding assistants can help developers build user interfaces quickly, but the code they generate should not be treated as production-ready by default. A generated form, dashboard, or workflow may look correct in a demo while still creating security risks such as unsafe HTML rendering, missing validation, unnecessary dependencies, exposed configuration, or client-side trust assumptions.
+
+    This introductory talk explains how developers and AppSec teams can review AI-generated frontend code using simple, practical guardrails. The session will walk through common risk patterns, what to look for during review, and how teams can use approved components, basic static checks, dependency review, browser tests, and CI gates to catch problems earlier.
+
+    The goal is not to avoid AI coding tools. The goal is to use them safely by treating their output as a draft that still needs engineering review, automated checks, and clear security boundaries.
+
+    Attendees will leave with a beginner-friendly checklist they can use when reviewing AI-generated frontend code.
+  track: "Builder"
+  speakers:
+    - name: "Niharika P Pujari"
+      image: niharika-p-pujari.png
+      position: "Lead Software Engineer"
+      company: "McGraw Hill"
+      bio: |-
+        Niharika P. Pujari is a Lead Software Engineer with over eight years of experience building large-scale web applications in the higher-education technology domain. She specializes in frontend architecture using Angular and accessibility-first engineering, embedding inclusive design and automated quality checks directly into development workflows.
+
+        Her work focuses on practical adoption of generative AI within software teams, including introducing guardrails, review practices, and validation strategies that allow organizations to use AI-assisted development while maintaining reliability and user experience. She also works with cloud technologies supported by hands-on AWS experience and certifications.
 
 - day: "Sunday, November 22"
   time: "2:00pm–2:30pm"
