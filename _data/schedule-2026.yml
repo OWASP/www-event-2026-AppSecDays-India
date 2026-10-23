@@ -17,8 +17,8 @@
 - day: "Saturday, November 21"
   time: "11:15am–12:00pm"
   tz: "IST"
-  title: "Opening keynote"
-  keynote: "Opening Keynote"
+  title: "Day 1 - Keynote"
+  keynote: "Day 1 - Keynote"
   speakers:
     - name: "Steve Springett"
       image: steve-springett.png
@@ -343,9 +343,19 @@
 - day: "Sunday, November 22"
   time: "11:00am–12:00pm"
   tz: "IST"
-  title: "Day 2 keynote (speaker to be announced)"
-  keynote: "Day 2 Keynote"
-  # Second keynote speaker to be announced. Add `speakers:` here (name, image, position, company, bio) when confirmed.
+  title: "Day 2 - Keynote"
+  keynote: "Day 2 - Keynote"
+  speakers:
+    - name: "K. K. Mookhey"
+      image: kk-mookhey.png
+      position: "Founder & CEO, Network Intelligence"
+      company: "Co-Founder, Transilience AI"
+      bio: >-
+        K. K. Mookhey is Founder and CEO of Network Intelligence, the cybersecurity firm he
+        started in 2001, and Co-Founder of Transilience AI. A Black Hat trainer and speaker, he
+        works at the intersection of AI and cybersecurity, with a background in penetration
+        testing, governance, risk and compliance, digital forensics, and incident response.
+        [LinkedIn](https://www.linkedin.com/in/kkmookhey/)
 
 - day: "Sunday, November 22"
   time: "12:00pm–12:30pm"
