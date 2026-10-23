@@ -9,6 +9,10 @@
   time: "11:00am–11:15am"
   tz: "IST"
   title: "Welcome and opening remarks"
+  speakers:
+    - name: "Vandana Verma Sehgal"
+      image: vandana-verma-sehgal.jpg
+      position: "Security Leader"
 
 - day: "Saturday, November 21"
   time: "11:15am–12:00pm"
@@ -431,28 +435,8 @@
 - day: "Sunday, November 22"
   time: "1:30pm–2:00pm"
   tz: "IST"
-  title: "Agentic Analytics: Trusted Human-AI Decision Intelligence at Scale"
-  outline: |-
-    Organizations increasingly rely on AI to accelerate operational decision-making, yet many struggle to balance speed, trust, governance, and human oversight. As operational data volumes grow across enterprise platforms, customer systems, and digital ecosystems, analytics teams face mounting challenges in extracting reliable insights while maintaining accountability for business decisions.
-
-    This presentation introduces agentic analytics, an emerging approach in which AI agents actively participate in analytical workflows by exploring datasets, identifying anomalies, generating summaries, and supporting decision intelligence under human supervision. Rather than replacing analysts, agentic systems augment human expertise by reducing manual effort associated with data extraction, exploratory analysis, reporting, and insight generation.
-
-    The session presents a practical framework for implementing agentic analytics through the integration of an enterprise data layer, analytics model layer, and AI agent layer. Attendees will learn how operational data is transformed into analytical outputs and decision-support narratives through structured human-AI collaboration.
-
-    A key focus of the discussion is the governance and risk considerations associated with AI-assisted analytics. The presentation examines validation of AI-generated insights, transparency of analytical reasoning, data governance requirements, and the operational risks of automation bias. It also explores how organizations can establish guardrails that preserve human accountability while benefiting from AI-driven analytical efficiency.
-
-    Attendees will leave with a clear understanding of the architectural components, governance practices, and implementation considerations required to deploy agentic analytics responsibly. The session is intended for security leaders, architects, operations teams, and technology practitioners seeking practical approaches for leveraging AI agents to improve decision intelligence while maintaining trust, oversight, and organizational control.
-  track: "Manager/Culture"
-  speakers:
-    - name: "Sushen Sarkar"
-      image: sushen-sarkar.jpg
-      position: "Data Analytics and Technology Leader"
-      company: "University of Chicago - Booth School of Business"
-      bio: |-
-        Sushen Sarkar is a seasoned data analytics and technology leader with extensive experience driving data-informed decision-making across large-scale, customer-focused and operational environments. Currently serving as a Manager of Data Analytics, he specializes in transforming complex business challenges into actionable insights through exploratory analysis, data visualization, and strategic storytelling. His work is centered on enhancing customer experience, improving operational efficiency, and strengthening data governance across enterprise systems.
-        Throughout his career, Sushen has demonstrated a strong ability to bridge the gap between business strategy and technical execution. He has led analytics initiatives supporting contact operations and store performance, translating business objectives into measurable insights and executive-level narratives. His expertise spans metrics design, data quality improvement, and the development of intuitive dashboards that enable organizations to make informed, timely decisions. He is also known for resolving complex data discrepancies and establishing robust validation frameworks that enhance reporting accuracy and trust.
-        In addition to his analytics leadership, Sushen brings deep experience in product development and engineering transformation. He has played a pivotal role in modernizing logistics and operational platforms, guiding transitions toward scalable architectures and user-centric solutions. His leadership has supported cross-functional collaboration across engineering, product, and operations teams, fostering innovation while improving workflows and system performance. He has also contributed to automation initiatives that streamline processes and enable more efficient resource utilization.
-        Sushen’s professional journey reflects a consistent focus on building high-performing teams and nurturing talent. He is recognized for his collaborative leadership style, commitment to operational excellence, and ability to drive meaningful organizational change. Complementing his industry experience, he holds an advanced business degree, further strengthening his strategic perspective and ability to align analytics with broader business goals.
+  title: "To be announced"
+  # Open slot. Add `speakers:` here (name, image, position, company, bio) when confirmed.
 
 - day: "Sunday, November 22"
   time: "2:00pm–2:30pm"
@@ -668,7 +652,6 @@
     - name: "Vandana Verma Sehgal"
       image: vandana-verma-sehgal.jpg
       position: "Security Leader"
-      company: "Snyk"
 
 # ---------------------------------------------------------------------------
 # Accepted but NOT yet scheduled (no free slot left after adding the Day 2 keynote).
