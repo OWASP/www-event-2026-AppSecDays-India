@@ -367,25 +367,7 @@
 - day: "Sunday, November 22"
   time: "12:00pm–12:30pm"
   tz: "IST"
-  title: "AI Security Engineer Foundations: Enforcing Policy with AI-BOM"
-  outline: |-
-    AI Security Engineer Foundations: Enforcing Policy with AI-BOM
-
-    As AI systems move from experimentation into production, security teams face a new problem: they often don’t know which models, datasets, or AI services are actually being used in their software. This lack of visibility makes it nearly impossible to enforce policy, assess risk, or meet emerging regulatory requirements.
-
-    This talk introduces AI Bills of Materials (AI-BOMs) as a foundational tool for AI security engineering. Beyond inventory, AI-BOMs provide a practical enforcement layer—making AI usage observable, auditable, and governable. We’ll start with a concise overview of what an AI-BOM is, how it differs from SBOMs, and why it matters for security teams today.
-
-    The session then moves from theory to practice. Attendees will see a live command-line demonstration of generating and validating an AI-BOM, followed by a GitHub Actions workflow that automatically fails a build when an unapproved or unknown AI model is introduced into a project. The result is a concrete example of “policy as code” applied to AI systems.
-
-    By the end of this talk, security engineers and platform teams will understand how AI-BOMs can serve as a control plane for AI governance—and how to start enforcing AI security policies before incidents and audits force the issue.
-  track: "Builder"
-  speakers:
-    - name: "Micah Silverman"
-      image: micah-silverman.png
-      position: "Director, AI Acceleration"
-      company: "Snyk"
-      bio: |-
-        Micah is Snyk's Director of AI Acceleration. With 30 years of Java Experience (yup, that's from the beginning) and as a security professional Micah's authored numerous articles, co-authored a Java EE book, and spoken at many conferences. He's a maker, who's built full-size MAME arcade cabinets and repaired old electronic games (https://dogeared.dev/2011/10/16/weekend-project-fix-dark-tower/). He brings his love of all things security and Java to a conference near you!
+  # Open slot. Add title and `speakers:` when confirmed.
 
 - day: "Sunday, November 22"
   time: "12:30pm–1:00pm"

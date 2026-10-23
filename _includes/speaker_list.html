@@ -122,6 +122,11 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 <h3 class="sched-time">{{ session.time }} {{ session.tz }}</h3>
 {% assign current_time = stamp %}
 {% endif %}
+{% assign show_session = false %}
+{% if session.title or session.outline or session.keynote or session.venue or session.speakers.size > 0 %}
+{% assign show_session = true %}
+{% endif %}
+{% if show_session %}
 <article class="sched-session{% if session.keynote %} is-keynote{% endif %}" id="session-{{ forloop.index }}">
 {% if session.keynote %}
 <span class="sched-badge">{{ session.keynote }}</span>
@@ -133,7 +138,7 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 {{ session.outline | replace: "|", "&#124;" | markdownify }}
 </div>
 </details>
-{% else %}
+{% elsif session.title %}
 <h4>{{ session.title }}</h4>
 {% endif %}
 {% if session.venue %}
@@ -158,6 +163,7 @@ Keep this markup unindented. The pages are Markdown, and indented HTML is render
 </div>
 {% endif %}
 </article>
+{% endif %}
 {% endif %}
 {% endfor %}
 {% if current_day != "" %}
