@@ -360,8 +360,21 @@
 - day: "Sunday, November 22"
   time: "12:00pm–12:30pm"
   tz: "IST"
-  title: "To be announced"
-  # Open slot. Add `speakers:` here (name, image, position, company, bio) when confirmed.
+  title: "Will the Real (Indian) Cyber Volk Please Stand Up? A Homegrown Ransomware Gang Explains Their Pro-Russia Branding Shift"
+  outline: |-
+    When an active ransomware gang believed to be based in India known as GLORIAMIST finally got the world’s attention, that attention was arguably because the gang started claiming support for Russia and ransoming victims as Cyber Volk, or ‘Cyber Wolf’, in Russian. We rarely hear about notorious or feared South Asian or Indian cybercriminals, but when we do, Western cyber threat intelligence industries and communities often suggestively frame these motivations as controlled by foreign governments, not motivations or choices personal to those homegrown gang members. This presentation, by one of the only certified former FBI profilers in the world specializing in the behaviors of ransomware gang personalities, argues that the threat and capabilities of Cyber Volk have been mischaracterized because of this suggestive Russian government support, and their reasons for promoting a seemingly pro-Russia hacktivist-ransomware branding are largely unknown or misunderstood. This presentation will explore the motivations of the personalities behind GLORIAMIST and the personal and environmental contexts of their shifts in branding and tactics. These motivations suggestively reflect their practical decision making and the relationships in their lives that shaped those motivations. This presentation will also feature cyber behavioral analysis of the gang’s cyber victimology, including how the gang has managed real and imagined perceptions of their ransom experiences and operations, before and after their shift to their Cyber Volk branding. This presentation represents one of the first behaviorally rich case studies of a homegrown Indian ransomware gang, challenging some of the cyber threat intelligence foundations of understanding of South Asian or Indian cybercrime ecosystems in an increasingly complex geopolitical cyber environment.
+  speakers:
+    - name: "Tim Pappa"
+      image: tim-pappa.jpg
+      position: "Staff Incident Response Engineer"
+      company: "Walmart Global Tech"
+      bio: >-
+        Tim Pappa is a Staff Incident Response Engineer at Walmart Global Tech, where he
+        works on cyber deception strategy, content, and operations. Before Walmart, he was
+        a Supervisory Special Agent and profiler with the FBI Behavioral Analysis Unit,
+        focused on cyber deception and cybercriminal behavior. He speaks and publishes on
+        cyber deception and is a Yale Digital Ethics Center Industry Fellow.
+        [LinkedIn](https://www.linkedin.com/in/timpappa/)
 
 - day: "Sunday, November 22"
   time: "12:30pm–1:00pm"
