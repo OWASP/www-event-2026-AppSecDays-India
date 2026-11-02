@@ -518,13 +518,8 @@
 - day: "Sunday, November 22"
   time: "4:30pm–5:00pm"
   tz: "IST"
-  title: "Agents in the Wild: A Security Operator's Guide to Deploying Agentic AI Without Getting Burned"
-  track: "Manager/Culture"
-  speakers:
-    - name: "Aiswarya Venkitesh"
-      image: aiswarya-venkitesh.png
-      position: "Principal Cloud Solution Architect"
-      company: "Microsoft"
+  title: "To be announced"
+  # Open slot. Add `speakers:` here (name, image, position, company, bio) when confirmed.
 
 - day: "Sunday, November 22"
   time: "5:00pm–5:30pm"
