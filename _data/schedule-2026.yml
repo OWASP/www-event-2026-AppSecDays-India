@@ -334,12 +334,6 @@
 
         Yariv is currently pursuing a master’s degree in computer science.
 
-- day: "Saturday, November 21"
-  time: "6:30pm–7:00pm"
-  tz: "IST"
-  title: "To be announced"
-  # Open slot. Add `speakers:` here (name, image, position, company, bio) when confirmed.
-
 - day: "Sunday, November 22"
   time: "11:00am–12:00pm"
   tz: "IST"
@@ -475,7 +469,7 @@
 - day: "Sunday, November 22"
   time: "3:00pm–3:30pm"
   tz: "IST"
-  title: "What It Takes to Write a Security Book"
+  title: "Writing a Security Book In The AI Era"
   track: "Manager/Culture"
   speakers:
     - name: "Rahul Nair"
